@@ -14,7 +14,13 @@ class GameEngine {
         void update();
         void render();
 
-        int finish();    
+        int finish();
+    
+    private:
+        int x = 3;
+        int y = 3;
+        bool quit = false;
+        
 };
 
 }

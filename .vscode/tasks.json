@@ -5,11 +5,12 @@
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
+                "-I",
+                "${workspaceRoot}\\game\\include",
                 "-g",
-                "${file}",
+                "${workspaceRoot}\\game\\src\\*.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceRoot}\\main.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"

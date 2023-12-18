@@ -1,7 +1,10 @@
-#include <iostream>
+#include "GameEngine.hpp"
 
-int main() {
-    std::cout << "Hello world" << std::endl;
+int main() 
+{
+    using namespace game;
+    GameEngine game;
+    game.run();
     return 0;
 }
 

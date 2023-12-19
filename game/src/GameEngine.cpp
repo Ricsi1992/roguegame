@@ -1,8 +1,12 @@
 #include "GameEngine.hpp"
 #include <iostream>
+#include <windows.h>
 
 namespace game
 {
+using namespace std::chrono_literals;
+constexpr std::chrono::nanoseconds timeStep(50ms);
+#define IS_PRESSED 0x8000
 
 int GameEngine::run() 
 {
@@ -13,42 +17,49 @@ int GameEngine::run()
 
 void GameEngine::init()
 {
-
+    currentTime = std::chrono::high_resolution_clock::now();
 }
 
 void GameEngine::gameLoop()
 {
+    std::chrono::nanoseconds lag(0ns);
     while (!quit)
     {
-        handleInput();
-        render();
+        auto deltaTime = std::chrono::high_resolution_clock::now() - currentTime;
+        currentTime = std::chrono::high_resolution_clock::now();
+        lag += std::chrono::duration_cast<std::chrono::nanoseconds>(deltaTime);
+
+        while (lag >= timeStep)
+        {
+            lag -= timeStep;
+            handleInput();
+            update();
+            render();
+        }
     }
 }
 
 void GameEngine::handleInput()
 {
-    char input;
-    std::cin >> input;
-
-    switch (input)
+    if (GetKeyState('W') & IS_PRESSED)
     {
-    case 'w':
         --y;
-        break;
-    case 's':
+        isStateChanged = true;
+    }
+    else if (GetKeyState('S') & IS_PRESSED)
+    {
         ++y;
-        break;
-    case 'a':
+        isStateChanged = true;
+    }
+    else if (GetKeyState('A') & IS_PRESSED)
+    {
         --x;
-        break;
-    case 'd':
+        isStateChanged = true;
+    }
+    else if (GetKeyState('D') & IS_PRESSED)
+    {
         ++x;
-        break;
-    case 'q':
-        quit = true;
-        break;
-    default:
-        break;
+        isStateChanged = true;
     }
 }
 
@@ -59,6 +70,13 @@ void GameEngine::update()
 
 void GameEngine::render()
 {
+    if (!isStateChanged)
+    {
+        return;
+    }
+    
+    system("cls");
+    
     for(int height = 0; height < y - 1; ++height) {
         std::cout << std::endl;
     }
@@ -68,6 +86,7 @@ void GameEngine::render()
     }
     std::cout << "@";
     std::cout << std::endl;
+    isStateChanged = false;
 }
 
 int GameEngine::finish()

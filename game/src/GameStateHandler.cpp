@@ -3,6 +3,12 @@
 namespace game
 {
 
+GameStateHandler::GameStateHandler()
+{
+    currentGameState = std::make_shared<GameState>();
+    previousGameState = std::make_shared<GameState>();
+}
+
 std::shared_ptr<GameState> GameStateHandler::getCurrentGameState() const
 {
     return currentGameState;
@@ -10,6 +16,10 @@ std::shared_ptr<GameState> GameStateHandler::getCurrentGameState() const
 std::shared_ptr<GameState> GameStateHandler::getPreviousGameState() const
 {
     return previousGameState;
+}
+Position GameStateHandler::getPlayerPosition() const
+{
+    return currentGameState->playerPosition;
 }
 bool GameStateHandler::isChanged() const
 {
@@ -19,6 +29,16 @@ bool GameStateHandler::isChanged() const
 void GameStateHandler::setPlayerPosition(Position const& t_newPosition)
 {
     currentGameState->playerPosition = t_newPosition;
+    isStateChanged = true;
+}
+void GameStateHandler::setPlayerPositionX(int const t_x)
+{
+    currentGameState->playerPosition.x = t_x;
+    isStateChanged = true;
+}
+void GameStateHandler::setPlayerPositionY(int const t_y)
+{
+    currentGameState->playerPosition.y = t_y;
     isStateChanged = true;
 }
 void GameStateHandler::setPlayerQuit(bool const t_quit)

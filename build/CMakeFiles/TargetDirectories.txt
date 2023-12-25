@@ -1,0 +1,5 @@
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/CMakeFiles/edit_cache.dir
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/CMakeFiles/rebuild_cache.dir
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/game/CMakeFiles/game.dir
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/game/CMakeFiles/edit_cache.dir
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/game/CMakeFiles/rebuild_cache.dir

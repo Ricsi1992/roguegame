@@ -1,1 +1,1 @@
--IC:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include
+-IC:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include -IC:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses -IC:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include

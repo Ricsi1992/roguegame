@@ -1,5 +1,11 @@
 game/CMakeFiles/game.dir/src/main.cpp.obj: \
  C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\main.cpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\stdarg.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\stddef.h c:\mingw\include\stdio.h \
+ c:\mingw\include\_mingw.h c:\mingw\include\msvcrtver.h \
+ c:\mingw\include\w32api.h c:\mingw\include\sdkddkver.h \
+ c:\mingw\include\features.h c:\mingw\include\sys/types.h \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameEngine.hpp \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\chrono \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ratio \
@@ -10,10 +16,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\pstl_config.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cstdint \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\stdint.h \
- c:\mingw\include\stdint.h c:\mingw\include\_mingw.h \
- c:\mingw\include\msvcrtver.h c:\mingw\include\w32api.h \
- c:\mingw\include\sdkddkver.h c:\mingw\include\features.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\stddef.h \
+ c:\mingw\include\stdint.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\limits \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ctime c:\mingw\include\time.h \
  c:\mingw\include\sys\types.h \
@@ -62,12 +65,11 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\postypes.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cwchar \
  c:\mingw\include\wchar.h c:\mingw\include\wctype.h \
- c:\mingw\include\stdio.h c:\mingw\include\sys/types.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\stdarg.h \
- c:\mingw\include\stdlib.h c:\mingw\include\direct.h \
- c:\mingw\include\sys/stat.h c:\mingw\include\conio.h \
- c:\mingw\include\io.h c:\mingw\include\stdint.h c:\mingw\include\time.h \
- c:\mingw\include\locale.h c:\mingw\include\process.h \
+ c:\mingw\include\stdio.h c:\mingw\include\stdlib.h \
+ c:\mingw\include\direct.h c:\mingw\include\sys/stat.h \
+ c:\mingw\include\conio.h c:\mingw\include\io.h c:\mingw\include\stdint.h \
+ c:\mingw\include\time.h c:\mingw\include\locale.h \
+ c:\mingw\include\process.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\atomicity.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\gthr.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\gthr-default.h \
@@ -102,7 +104,6 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\include\alloca.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\std_abs.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cstdio \
- c:\mingw\include\stdio.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cerrno \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_string.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\invoke.h \

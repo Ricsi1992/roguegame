@@ -153,6 +153,30 @@ src/ASCIIRenderEngine.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.s
 .PHONY : src/ASCIIRenderEngine.cpp.s
 
+src/CursesRenderingEngine.obj: src/CursesRenderingEngine.cpp.obj
+.PHONY : src/CursesRenderingEngine.obj
+
+# target to build an object file
+src/CursesRenderingEngine.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj
+.PHONY : src/CursesRenderingEngine.cpp.obj
+
+src/CursesRenderingEngine.i: src/CursesRenderingEngine.cpp.i
+.PHONY : src/CursesRenderingEngine.i
+
+# target to preprocess a source file
+src/CursesRenderingEngine.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.i
+.PHONY : src/CursesRenderingEngine.cpp.i
+
+src/CursesRenderingEngine.s: src/CursesRenderingEngine.cpp.s
+.PHONY : src/CursesRenderingEngine.s
+
+# target to generate assembly for a file
+src/CursesRenderingEngine.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.s
+.PHONY : src/CursesRenderingEngine.cpp.s
+
 src/GameEngine.obj: src/GameEngine.cpp.obj
 .PHONY : src/GameEngine.obj
 
@@ -237,6 +261,9 @@ help:
 	@echo ... src/ASCIIRenderEngine.obj
 	@echo ... src/ASCIIRenderEngine.i
 	@echo ... src/ASCIIRenderEngine.s
+	@echo ... src/CursesRenderingEngine.obj
+	@echo ... src/CursesRenderingEngine.i
+	@echo ... src/CursesRenderingEngine.s
 	@echo ... src/GameEngine.obj
 	@echo ... src/GameEngine.i
 	@echo ... src/GameEngine.s

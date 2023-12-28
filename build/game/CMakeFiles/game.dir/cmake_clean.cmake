@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "../bin/game.pdb"
   "CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.obj"
   "CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.obj.d"
+  "CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj"
+  "CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj.d"
   "CMakeFiles/game.dir/src/GameEngine.cpp.obj"
   "CMakeFiles/game.dir/src/GameEngine.cpp.obj.d"
   "CMakeFiles/game.dir/src/GameStateHandler.cpp.obj"

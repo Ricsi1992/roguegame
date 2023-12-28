@@ -83,11 +83,26 @@ game/CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.s"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\ASCIIRenderEngine.cpp -o CMakeFiles\game.dir\src\ASCIIRenderEngine.cpp.s
 
+game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
+game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/CursesRenderingEngine.cpp
+game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj -MF CMakeFiles\game.dir\src\CursesRenderingEngine.cpp.obj.d -o CMakeFiles\game.dir\src\CursesRenderingEngine.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\CursesRenderingEngine.cpp
+
+game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.i"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\CursesRenderingEngine.cpp > CMakeFiles\game.dir\src\CursesRenderingEngine.cpp.i
+
+game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.s"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\CursesRenderingEngine.cpp -o CMakeFiles\game.dir\src\CursesRenderingEngine.cpp.s
+
 game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
 game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameEngine.cpp
 game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/CMakeFiles/game.dir/src/GameEngine.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/src/GameEngine.cpp.obj"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/GameEngine.cpp.obj -MF CMakeFiles\game.dir\src\GameEngine.cpp.obj.d -o CMakeFiles\game.dir\src\GameEngine.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\GameEngine.cpp
 
 game/CMakeFiles/game.dir/src/GameEngine.cpp.i: cmake_force
@@ -102,7 +117,7 @@ game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj: game/CMakeFiles/game.dir/
 game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
 game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameStateHandler.cpp
 game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj -MF CMakeFiles\game.dir\src\GameStateHandler.cpp.obj.d -o CMakeFiles\game.dir\src\GameStateHandler.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\GameStateHandler.cpp
 
 game/CMakeFiles/game.dir/src/GameStateHandler.cpp.i: cmake_force
@@ -117,7 +132,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/main.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
 game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/main.cpp
 game/CMakeFiles/game.dir/src/main.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object game/CMakeFiles/game.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object game/CMakeFiles/game.dir/src/main.cpp.obj"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/main.cpp.obj -MF CMakeFiles\game.dir\src\main.cpp.obj.d -o CMakeFiles\game.dir\src\main.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\main.cpp
 
 game/CMakeFiles/game.dir/src/main.cpp.i: cmake_force
@@ -131,6 +146,7 @@ game/CMakeFiles/game.dir/src/main.cpp.s: cmake_force
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.obj" \
+"CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj" \
 "CMakeFiles/game.dir/src/GameEngine.cpp.obj" \
 "CMakeFiles/game.dir/src/GameStateHandler.cpp.obj" \
 "CMakeFiles/game.dir/src/main.cpp.obj"
@@ -139,6 +155,7 @@ game_OBJECTS = \
 game_EXTERNAL_OBJECTS =
 
 bin/game.exe: game/CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.obj
+bin/game.exe: game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/GameEngine.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/main.cpp.obj
@@ -146,7 +163,7 @@ bin/game.exe: game/CMakeFiles/game.dir/build.make
 bin/game.exe: game/CMakeFiles/game.dir/linkLibs.rsp
 bin/game.exe: game/CMakeFiles/game.dir/objects1.rsp
 bin/game.exe: game/CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ..\bin\game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ..\bin\game.exe"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\game.dir\link.txt --verbose=$(VERBOSE)
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/windows/pdcurses/pdcurses.dll C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/bin
 

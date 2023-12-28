@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/ASCIIRenderEngine.cpp" "game/CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/ASCIIRenderEngine.cpp.obj.d"
+  "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/CursesRenderingEngine.cpp" "game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj.d"
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameEngine.cpp" "game/CMakeFiles/game.dir/src/GameEngine.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/GameEngine.cpp.obj.d"
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameStateHandler.cpp" "game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj.d"
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/main.cpp" "game/CMakeFiles/game.dir/src/main.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/main.cpp.obj.d"

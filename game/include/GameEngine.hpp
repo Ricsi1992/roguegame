@@ -1,7 +1,7 @@
 #pragma once
 #include <chrono>
 #include "GameStateHandler.hpp"
-#include "ASCIIRenderEngine.hpp"
+#include "CursesRenderingEngine.hpp"
 
 namespace game {
    
@@ -23,7 +23,7 @@ class GameEngine {
     private:
         std::chrono::time_point<std::chrono::system_clock> currentTime;
         GameStateHandler gameState;
-        ASCIIRenderEngine renderEngine;
+        CursesRenderingEngine renderEngine;
 };
 
 }

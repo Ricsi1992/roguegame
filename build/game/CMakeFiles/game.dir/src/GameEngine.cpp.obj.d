@@ -122,6 +122,7 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/CursesRenderingEngine.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\random \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cmath c:\mingw\include\math.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\specfun.h \

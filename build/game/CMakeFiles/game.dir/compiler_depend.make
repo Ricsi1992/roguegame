@@ -152,6 +152,7 @@ game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: C:/CzRProg/Ricsi_pro
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/CursesRenderingEngine.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
+  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameUI.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
@@ -281,6 +282,7 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C+
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateHandler.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
+  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/alloca.h \
   C:/MinGW/include/basetsd.h \
@@ -621,6 +623,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/work
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateHandler.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
+  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/alloca.h \
   C:/MinGW/include/conio.h \
@@ -1083,6 +1086,8 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdint.h:
+
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameUI.hpp:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameEngine.cpp:
 

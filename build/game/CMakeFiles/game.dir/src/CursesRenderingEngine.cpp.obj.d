@@ -115,4 +115,5 @@ game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameUI.hpp

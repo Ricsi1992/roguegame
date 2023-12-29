@@ -11,8 +11,14 @@ namespace game
 
         //Main play area
         static constexpr Position topLeft{0, 0};
-        static const int playArewaWidth{120};
-        static const int playArewaHeight{20};
+        static const int playAreaWidth{120};
+        static const int playAreaHeight{20};
+
+        static const int mapAreaWidth{80};
+        static const int mapAreaHeight{10};
+        
+        static const int infoAreaWidth{40};
+        static const int infoAreaHeight{10};
     };
     
 }

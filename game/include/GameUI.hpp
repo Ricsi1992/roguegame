@@ -1,4 +1,6 @@
 #pragma once
+#include <vector>
+#include <iostream>
 #include "Position.hpp"
 
 namespace game
@@ -19,6 +21,16 @@ namespace game
         
         static const int infoAreaWidth{40};
         static const int infoAreaHeight{10};
+
+        static const std::vector<std::string> title;
     };
+
+    const std::vector<std::string> GameUI::title = {
+" _ __ ___   __ _ _   _  ___  __ _  __ _ _ __ ___   ___ ",
+"| '__/ _ \\ / _` | | | |/ _ \\/ _` |/ _` | '_ ` _ \\ / _ \\",
+"| | | (_) | (_| | |_| |  __/ (_| | (_| | | | | | |  __/",
+"|_|  \\___/ \\__, |\\__,_|\\___|\\__, |\\__,_|_| |_| |_|\\___|",
+"           |___/            |___/               "
+};
     
 }

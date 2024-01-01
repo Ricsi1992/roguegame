@@ -20,12 +20,18 @@ CursesRenderingEngine::~CursesRenderingEngine()
     endwin();
 }
 
-void CursesRenderingEngine::render(std::shared_ptr<GameState> t_currentState)
+void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
 {
-
+    if (t_previousState && t_previousState->currentGameState == GameStateEnum::START && 
+    t_currentState->currentGameState == GameStateEnum::PLAY)
+    {
+        drawUI();
+        drawMap(t_previousState, t_currentState);
+    }
+    
     if (t_currentState->currentGameState == GameStateEnum::PLAY)
     {
-       drawUI();
+        drawCurrentState(t_previousState, t_currentState);
     }
     
     else if (t_currentState->currentGameState == GameStateEnum::START)
@@ -42,14 +48,22 @@ void CursesRenderingEngine::render(std::shared_ptr<GameState> t_currentState)
         
         std::string start ="Press SPACE to start!";
         mvwprintw(stdscr, (y - GameUI::title.size()) / 2 + GameUI::title.size(), (x - start.size()) / 2, start.c_str());
-        refresh();
     }
     
     else if (t_currentState->currentGameState == GameStateEnum::WIN)
     {
-        
+        erase();
+        int x = 0, y = 0;
+        getmaxyx(stdscr, y, x);
+        std::string wonText = "You have won the game!";
+        std::string quitText = "Press Q to quit!";
+
+        int centerY = y / 2;
+        mvwprintw(stdscr, centerY, (x - wonText.size()) / 2, wonText.c_str());
+        mvwprintw(stdscr, centerY + 1, (x - quitText.size()) / 2, quitText.c_str());
     }
-    
+
+    refresh();
 }
 
 void CursesRenderingEngine::drawUI() 
@@ -67,6 +81,28 @@ void CursesRenderingEngine::drawUI()
     GameUI::topLeft.y + GameUI::playAreaHeight, GameUI::topLeft.x + GameUI::mapAreaWidth));
     box(infoWindow.get(), '2', '2');
     wrefresh(infoWindow.get());
+}
+
+void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
+{
+    int centerX = (GameUI::playAreaWidth - t_currentState->map.width) / 2;
+    int centerY = (GameUI::playAreaHeight - t_currentState->map.height) / 2;
+    playAreaWindow = std::unique_ptr<WINDOW>(newwin(t_currentState->map.height, t_currentState->map.width, 
+    centerY, centerX));
+    box(playAreaWindow.get(), 0, 0);
+    mvwaddch(playAreaWindow.get(), t_currentState->map.end.y, t_currentState->map.end.x, GameUI::exitCharacter);
+    wrefresh(playAreaWindow.get());
+}
+
+void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
+{
+    if (t_previousState)
+    {
+        mvwaddch(playAreaWindow.get(), t_previousState->playerPosition.y, t_previousState->playerPosition.x, GameUI::emptyCharacter);
+    }
+    
+    mvwaddch(playAreaWindow.get(), t_currentState->playerPosition.y, t_currentState->playerPosition.x, GameUI::playerCharacter);
+    wrefresh(playAreaWindow.get());
 }
 
 }

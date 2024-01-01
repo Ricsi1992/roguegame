@@ -115,7 +115,7 @@ void GameEngine::render()
         return;
     }
 
-    renderEngine.render(gameState.getCurrentGameState());
+    renderEngine.render(gameState.getPreviousGameState(), gameState.getCurrentGameState());
 
     gameState.currentStateHandled();
 }

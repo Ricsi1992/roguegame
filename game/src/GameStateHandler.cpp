@@ -6,7 +6,7 @@ namespace game
 GameStateHandler::GameStateHandler()
 {
     currentGameState = std::make_shared<GameState>();
-    previousGameState = std::make_shared<GameState>();
+    previousGameState = nullptr;
 }
 
 std::shared_ptr<GameState> GameStateHandler::getCurrentGameState() const

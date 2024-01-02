@@ -1,6 +1,7 @@
-#include "GameEngine.hpp"
 #include <random>
 #include <windows.h>
+#include "GameEngine.hpp"
+#include "RandomGenerator.hpp"
 
 namespace game
 {
@@ -19,12 +20,11 @@ void GameEngine::init()
 {
     currentTime = std::chrono::high_resolution_clock::now();
 
-    std::default_random_engine generator(currentTime.time_since_epoch().count());
-    std::uniform_int_distribution<int> distWidth(1, gameState.getCurrentGameState()->map.width - 2);
-    std::uniform_int_distribution<int> distHeight(1, gameState.getCurrentGameState()->map.height - 2);
+    RandomGenerator* randomGenerator = RandomGenerator::getInstance();
+    randomGenerator->setSeed(currentTime.time_since_epoch().count());
 
-    gameState.getCurrentGameState()->map.end.x = distWidth(generator);
-    gameState.getCurrentGameState()->map.end.y = distHeight(generator);
+    gameState.getCurrentGameState()->map.end.x = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.width-2);
+    gameState.getCurrentGameState()->map.end.y = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height-2);
 }
 
 void GameEngine::gameLoop()

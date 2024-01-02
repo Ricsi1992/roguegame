@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/src/GameEngine.cpp.obj.d"
   "CMakeFiles/game.dir/src/GameStateHandler.cpp.obj"
   "CMakeFiles/game.dir/src/GameStateHandler.cpp.obj.d"
+  "CMakeFiles/game.dir/src/RandomGenerator.cpp.obj"
+  "CMakeFiles/game.dir/src/RandomGenerator.cpp.obj.d"
   "CMakeFiles/game.dir/src/main.cpp.obj"
   "CMakeFiles/game.dir/src/main.cpp.obj.d"
   "libgame.dll.a"

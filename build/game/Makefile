@@ -225,6 +225,30 @@ src/GameStateHandler.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/GameStateHandler.cpp.s
 .PHONY : src/GameStateHandler.cpp.s
 
+src/RandomGenerator.obj: src/RandomGenerator.cpp.obj
+.PHONY : src/RandomGenerator.obj
+
+# target to build an object file
+src/RandomGenerator.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/RandomGenerator.cpp.obj
+.PHONY : src/RandomGenerator.cpp.obj
+
+src/RandomGenerator.i: src/RandomGenerator.cpp.i
+.PHONY : src/RandomGenerator.i
+
+# target to preprocess a source file
+src/RandomGenerator.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/RandomGenerator.cpp.i
+.PHONY : src/RandomGenerator.cpp.i
+
+src/RandomGenerator.s: src/RandomGenerator.cpp.s
+.PHONY : src/RandomGenerator.s
+
+# target to generate assembly for a file
+src/RandomGenerator.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/RandomGenerator.cpp.s
+.PHONY : src/RandomGenerator.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -270,6 +294,9 @@ help:
 	@echo ... src/GameStateHandler.obj
 	@echo ... src/GameStateHandler.i
 	@echo ... src/GameStateHandler.s
+	@echo ... src/RandomGenerator.obj
+	@echo ... src/RandomGenerator.i
+	@echo ... src/RandomGenerator.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

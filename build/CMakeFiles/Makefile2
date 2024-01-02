@@ -95,12 +95,12 @@ game/clean: game/CMakeFiles/game.dir/clean
 game/CMakeFiles/game.dir/all:
 	$(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target game"
 .PHONY : game/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 game/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 game/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles 0
 .PHONY : game/CMakeFiles/game.dir/rule

@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameEngine.cpp" "game/CMakeFiles/game.dir/src/GameEngine.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/GameEngine.cpp.obj.d"
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameStateHandler.cpp" "game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/GameStateHandler.cpp.obj.d"
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/RandomGenerator.cpp" "game/CMakeFiles/game.dir/src/RandomGenerator.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/RandomGenerator.cpp.obj.d"
+  "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/MovementComponent.cpp" "game/CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj.d"
   "C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/main.cpp" "game/CMakeFiles/game.dir/src/main.cpp.obj" "gcc" "game/CMakeFiles/game.dir/src/main.cpp.obj.d"
   )
 

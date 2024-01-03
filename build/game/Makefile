@@ -249,6 +249,30 @@ src/RandomGenerator.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/RandomGenerator.cpp.s
 .PHONY : src/RandomGenerator.cpp.s
 
+src/gameObjects/MovementComponent.obj: src/gameObjects/MovementComponent.cpp.obj
+.PHONY : src/gameObjects/MovementComponent.obj
+
+# target to build an object file
+src/gameObjects/MovementComponent.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj
+.PHONY : src/gameObjects/MovementComponent.cpp.obj
+
+src/gameObjects/MovementComponent.i: src/gameObjects/MovementComponent.cpp.i
+.PHONY : src/gameObjects/MovementComponent.i
+
+# target to preprocess a source file
+src/gameObjects/MovementComponent.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.i
+.PHONY : src/gameObjects/MovementComponent.cpp.i
+
+src/gameObjects/MovementComponent.s: src/gameObjects/MovementComponent.cpp.s
+.PHONY : src/gameObjects/MovementComponent.s
+
+# target to generate assembly for a file
+src/gameObjects/MovementComponent.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.s
+.PHONY : src/gameObjects/MovementComponent.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -297,6 +321,9 @@ help:
 	@echo ... src/RandomGenerator.obj
 	@echo ... src/RandomGenerator.i
 	@echo ... src/RandomGenerator.s
+	@echo ... src/gameObjects/MovementComponent.obj
+	@echo ... src/gameObjects/MovementComponent.i
+	@echo ... src/gameObjects/MovementComponent.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

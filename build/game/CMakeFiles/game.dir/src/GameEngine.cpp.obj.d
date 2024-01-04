@@ -188,4 +188,5 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/MovementEngine.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/RandomGenerator.hpp

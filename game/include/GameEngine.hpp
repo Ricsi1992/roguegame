@@ -2,6 +2,7 @@
 #include <chrono>
 #include "GameStateHandler.hpp"
 #include "CursesRenderingEngine.hpp"
+#include "MovementEngine.hpp"
 #include "gameObjects/GameObjectManager.hpp"
 
 namespace game {
@@ -26,6 +27,7 @@ class GameEngine {
         GameStateHandler gameState;
         CursesRenderingEngine renderEngine;
         GameObjectManager gameObjectManager;
+        MovementEngine movementEngine;
 };
 
 }

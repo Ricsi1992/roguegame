@@ -67,17 +67,13 @@ void GameEngine::update()
 {
     if (gameState.getCurrentGameState()->currentGameState == GameStateEnum::PLAY)
     {
-        gameObjectManager.playerObject->inputComponent->update();
-        if (gameObjectManager.playerObject->inputComponent->needsUpdate)
+        movementEngine.update(gameObjectManager, gameState.getCurrentGameState());
+
+        if (gameObjectManager.playerObject->movementComponent->position == gameState.getCurrentGameState()->map.end)
         {
-            gameObjectManager.playerObject->movementComponent->move(gameObjectManager.playerObject->inputComponent->facing);
-        }    
+            gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
+        }
     }
-    /* if (gameState.getCurrentGameState()->currentGameState == GameStateEnum::PLAY 
-        && gameState.getCurrentGameState()->playerPosition == gameState.getCurrentGameState()->map.end)
-    {
-        gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
-    } */
 }
 
 void GameEngine::render()

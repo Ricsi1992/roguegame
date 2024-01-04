@@ -1,26 +1,13 @@
-game/CMakeFiles/game.dir/src/main.cpp.obj: \
- C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\main.cpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameEngine.hpp \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\chrono \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ratio \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\type_traits \
+game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: \
+ C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\MovementEngine.cpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/MovementEngine.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObjectManager.hpp \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\vector \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_algobase.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\c++config.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\os_defines.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\cpu_defines.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\pstl_config.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cstdint \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\stdint.h \
- c:\mingw\include\stdint.h c:\mingw\include\_mingw.h \
- c:\mingw\include\msvcrtver.h c:\mingw\include\w32api.h \
- c:\mingw\include\sdkddkver.h c:\mingw\include\features.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\stddef.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\limits \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ctime c:\mingw\include\time.h \
- c:\mingw\include\sys\types.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\parse_numbers.h \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateHandler.hpp \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\memory \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_algobase.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\functexcept.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\exception_defines.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\cpp_type_traits.h \
@@ -29,6 +16,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_pair.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\move.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\concept_check.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\type_traits \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_iterator_base_types.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_iterator_base_funcs.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\debug\assertions.h \
@@ -44,6 +32,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\exception.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\exception_ptr.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\cxxabi_init_exception.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\stddef.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\typeinfo \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\hash_bytes.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\nested_exception.h \
@@ -55,13 +44,22 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\utility \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_relops.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\initializer_list \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_vector.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_bvector.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\functional_hash.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\range_access.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\vector.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\memory \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_tempbuf.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_raw_storage_iter.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iosfwd \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stringfwd.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\postypes.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cwchar \
- c:\mingw\include\wchar.h c:\mingw\include\wctype.h \
+ c:\mingw\include\wchar.h c:\mingw\include\_mingw.h \
+ c:\mingw\include\msvcrtver.h c:\mingw\include\w32api.h \
+ c:\mingw\include\sdkddkver.h c:\mingw\include\features.h \
+ c:\mingw\include\wctype.h c:\mingw\include\sys\types.h \
  c:\mingw\include\stdio.h c:\mingw\include\sys/types.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\stdarg.h \
  c:\mingw\include\stdlib.h c:\mingw\include\direct.h \
@@ -83,6 +81,9 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\stdexcept \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\string \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\char_traits.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cstdint \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\stdint.h \
+ c:\mingw\include\stdint.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\localefwd.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\c++locale.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\clocale \
@@ -91,10 +92,9 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\include\ctype.h c:\mingw\include\wctype.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream_insert.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\cxxabi_forced.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\range_access.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_string.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\string_view \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\functional_hash.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\limits \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\string_view.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\string_conversions.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cstdlib \
@@ -117,21 +117,13 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\backward\auto_ptr.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\glue_memory_defs.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\execution_defs.h \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObject.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MovementComponent.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/CursesRenderingEngine.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObjectManager.hpp \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\vector \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_vector.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_bvector.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\vector.tcc \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObject.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MovementComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/MovementEngine.hpp
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp

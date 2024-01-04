@@ -2,6 +2,7 @@
 #include <chrono>
 #include "GameStateHandler.hpp"
 #include "CursesRenderingEngine.hpp"
+#include "gameObjects/GameObjectManager.hpp"
 
 namespace game {
    
@@ -24,6 +25,7 @@ class GameEngine {
         std::chrono::time_point<std::chrono::system_clock> currentTime;
         GameStateHandler gameState;
         CursesRenderingEngine renderEngine;
+        GameObjectManager gameObjectManager;
 };
 
 }

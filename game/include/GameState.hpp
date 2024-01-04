@@ -8,7 +8,6 @@ namespace game
 
 struct GameState
 {
-    Position playerPosition{3,3};
     bool quit = false;
     GameStateEnum currentGameState = GameStateEnum::START;
     Map map;

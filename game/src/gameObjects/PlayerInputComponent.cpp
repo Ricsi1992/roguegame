@@ -1,11 +1,12 @@
 #include "gameObjects/PlayerInputComponent.hpp"
 #include <windows.h>
+#undef MOUSE_MOVED
 #define IS_PRESSED 0x8000
 
 namespace game
 {
 
-void PlayerInputComponent::update(GameObject& t_gameObject, std::shared_ptr<GameState> t_gameState)
+void PlayerInputComponent::update()
 {
     needsUpdate = false;
     if (GetKeyState('W') & IS_PRESSED)

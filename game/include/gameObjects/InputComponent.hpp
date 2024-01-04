@@ -12,7 +12,7 @@ class InputComponent
 {
 public:
     virtual ~InputComponent() {}
-    virtual void update(GameObject& t_gameObject, std::shared_ptr<GameState> t_gameState) = 0;
+    virtual void update() = 0;
 
 public:
     Direction facing;

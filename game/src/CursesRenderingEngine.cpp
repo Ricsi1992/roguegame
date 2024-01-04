@@ -20,7 +20,7 @@ CursesRenderingEngine::~CursesRenderingEngine()
     endwin();
 }
 
-void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
+void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager)
 {
     if (t_previousState && t_previousState->currentGameState == GameStateEnum::START && 
     t_currentState->currentGameState == GameStateEnum::PLAY)
@@ -31,7 +31,7 @@ void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, s
     
     if (t_currentState->currentGameState == GameStateEnum::PLAY)
     {
-        drawCurrentState(t_previousState, t_currentState);
+        drawCurrentState(t_previousState, t_currentState, t_objectManager);
     }
     
     else if (t_currentState->currentGameState == GameStateEnum::START)
@@ -94,15 +94,17 @@ void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, 
     wrefresh(playAreaWindow.get());
 }
 
-void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
+void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager)
 {
-    if (t_previousState)
+     if (t_previousState)
     {
-        mvwaddch(playAreaWindow.get(), t_previousState->playerPosition.y, t_previousState->playerPosition.x, GameUI::emptyCharacter);
+        mvwaddch(playAreaWindow.get(), t_objectManager.playerObject->movementComponent->previousPosition.y, 
+            t_objectManager.playerObject->movementComponent->previousPosition.x, GameUI::emptyCharacter);
     }
     
-    mvwaddch(playAreaWindow.get(), t_currentState->playerPosition.y, t_currentState->playerPosition.x, GameUI::playerCharacter);
-    wrefresh(playAreaWindow.get());
+    mvwaddch(playAreaWindow.get(),  t_objectManager.playerObject->movementComponent->position.y, 
+        t_objectManager.playerObject->movementComponent->position.x, t_objectManager.playerObject->renderComponent->renderChar);
+    wrefresh(playAreaWindow.get()); 
 }
 
 }

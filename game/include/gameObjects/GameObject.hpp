@@ -20,7 +20,7 @@ public:
         movementComponent(t_movementComponent),
         inputComponent(t_inputComponent),
         renderComponent(t_renderComponent) {}
-private:
+public:
         std::uint32_t index;
         std::shared_ptr<MovementComponent> movementComponent;
         std::shared_ptr<InputComponent> inputComponent;

@@ -16,10 +16,28 @@ void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_
         {
         t_gameObjectManager.playerObject->movementComponent->move(t_gameObjectManager.playerObject->inputComponent->facing);
         }
-    }    
+    }
+
+    for (auto&& gameObject : t_gameObjectManager.gameObjects)
+    {
+        gameObject->inputComponent->update();
+        if (gameObject->inputComponent->needsUpdate)
+        {
+            if(wouldBeOutOfBounds(
+            gameObject->movementComponent->position, 
+            gameObject->inputComponent->facing,
+            t_currentGameState->map.width, 
+            t_currentGameState->map.height))
+            {
+                continue;
+            }
+            gameObject->movementComponent->move(gameObject->inputComponent->facing);
+        
+        }
+    }
 }
 
-bool  MovementEngine::wouldBeOutOfBounds(Position const& t_position, Direction const t_facing, int const t_maxWidth, int const t_maxHeight)
+bool MovementEngine::wouldBeOutOfBounds(Position const& t_position, Direction const t_facing, int const t_maxWidth, int const t_maxHeight)
 {
     if ((t_position.y == 0 && t_facing == Direction::UP)
         || (t_position.y == t_maxHeight - 1 && t_facing == Direction::DOWN)

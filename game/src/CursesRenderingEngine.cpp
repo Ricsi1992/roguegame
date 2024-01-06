@@ -6,6 +6,21 @@
 namespace game
 {
 
+namespace
+{
+
+void switchColor(bool t_isOn, ObjectColor const t_color, WINDOW* t_window)
+{
+    if (t_isOn)
+    {
+        wattron(t_window, COLOR_PAIR(static_cast<int>(t_color)));
+    }
+    else
+    {
+        wattroff(t_window, COLOR_PAIR(static_cast<int>(t_color)));
+    }
+}
+}
 
 CursesRenderingEngine::CursesRenderingEngine() 
 {
@@ -14,6 +29,12 @@ CursesRenderingEngine::CursesRenderingEngine()
     noecho();
     curs_set(FALSE);
     resize_term(GameUI::windowHeight, GameUI::windowWidth);
+    start_color();
+    
+    init_pair(1, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(2, COLOR_RED, COLOR_BLACK);
+    init_pair(3, COLOR_GREEN, COLOR_BLACK);
+    init_pair(4, COLOR_BLUE, COLOR_BLACK);
 }
 
 CursesRenderingEngine::~CursesRenderingEngine()
@@ -40,12 +61,9 @@ void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, s
         int x = 0, y = 0;
         getmaxyx(stdscr, y, x);
 
-        start_color();
-        init_pair(1, COLOR_BLUE, COLOR_BLACK);
         attron(COLOR_PAIR(1));
         utils::mvprintw_vector((y - GameUI::title.size()) / 2 - 1, (x - GameUI::title[0].size()) / 2, GameUI::title);
         attroff(COLOR_PAIR(1));
-        
         
         std::string start ="Press SPACE to start!";
         mvwprintw(stdscr, (y - GameUI::title.size()) / 2 + GameUI::title.size(), (x - start.size()) / 2, start.c_str());
@@ -139,8 +157,10 @@ void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previo
 
 void CursesRenderingEngine::drawObject(std::shared_ptr<GameObject> t_gameObject)
 {
+    switchColor(true, t_gameObject->renderComponent->color, playAreaWindow.get());
     mvwaddch(playAreaWindow.get(),  t_gameObject->movementComponent->position.y, 
     t_gameObject->movementComponent->position.x, t_gameObject->renderComponent->renderChar);
+    switchColor(false, t_gameObject->renderComponent->color, playAreaWindow.get());
 }
 
 }

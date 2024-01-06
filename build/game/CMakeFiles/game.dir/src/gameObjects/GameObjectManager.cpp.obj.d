@@ -126,4 +126,5 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MonsterInputComponent.hpp

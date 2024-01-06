@@ -18,6 +18,7 @@ private:
     void drawUI();
     void drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState);
     void drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager);
+    void drawObject(std::shared_ptr<GameObject> t_gameObject);
 private:
     std::unique_ptr<WINDOW> playWindow;
     std::unique_ptr<WINDOW> playAreaWindow;

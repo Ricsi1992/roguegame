@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/src/RandomGenerator.cpp.obj.d"
   "CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj"
   "CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj.d"
+  "CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.obj"
+  "CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.obj.d"
   "CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj"
   "CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj.d"
   "CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.obj"

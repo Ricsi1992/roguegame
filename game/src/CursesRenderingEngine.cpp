@@ -6,6 +6,7 @@
 namespace game
 {
 
+
 CursesRenderingEngine::CursesRenderingEngine() 
 {
     initscr();
@@ -117,14 +118,29 @@ void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previo
     {
         mvwaddch(playAreaWindow.get(), t_objectManager.playerObject->movementComponent->previousPosition.y, 
         t_objectManager.playerObject->movementComponent->previousPosition.x, GameUI::emptyCharacter);
+        for (auto&& gameObject : t_objectManager.gameObjects)
+        {
+            mvwaddch(playAreaWindow.get(), gameObject->movementComponent->previousPosition.y, 
+            gameObject->movementComponent->previousPosition.x, GameUI::emptyCharacter);
+        }
     }
 
     mvwaddch(playAreaWindow.get(), t_currentState->map.end.y, t_currentState->map.end.x, GameUI::exitCharacter);
-    wrefresh(playAreaWindow.get());
     
-    mvwaddch(playAreaWindow.get(),  t_objectManager.playerObject->movementComponent->position.y, 
-    t_objectManager.playerObject->movementComponent->position.x, t_objectManager.playerObject->renderComponent->renderChar);
+    drawObject(t_objectManager.playerObject);
+    
+    for (auto&& gameObject : t_objectManager.gameObjects)
+    {
+        drawObject(gameObject);
+    }
+    
     wrefresh(playAreaWindow.get()); 
+}
+
+void CursesRenderingEngine::drawObject(std::shared_ptr<GameObject> t_gameObject)
+{
+    mvwaddch(playAreaWindow.get(),  t_gameObject->movementComponent->position.y, 
+    t_gameObject->movementComponent->position.x, t_gameObject->renderComponent->renderChar);
 }
 
 }

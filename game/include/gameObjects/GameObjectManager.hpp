@@ -11,7 +11,7 @@ class GameObjectManager
 {
 public:
     void createPlayer(Position const& t_position);
-
+    void createMonster(Position const& t_position);
 public:
     std::vector<std::shared_ptr<GameObject>> gameObjects;
     std::shared_ptr<GameObject> playerObject;

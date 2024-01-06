@@ -273,6 +273,30 @@ src/gameObjects/GameObjectManager.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.s
 .PHONY : src/gameObjects/GameObjectManager.cpp.s
 
+src/gameObjects/MonsterInputComponent.obj: src/gameObjects/MonsterInputComponent.cpp.obj
+.PHONY : src/gameObjects/MonsterInputComponent.obj
+
+# target to build an object file
+src/gameObjects/MonsterInputComponent.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.obj
+.PHONY : src/gameObjects/MonsterInputComponent.cpp.obj
+
+src/gameObjects/MonsterInputComponent.i: src/gameObjects/MonsterInputComponent.cpp.i
+.PHONY : src/gameObjects/MonsterInputComponent.i
+
+# target to preprocess a source file
+src/gameObjects/MonsterInputComponent.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.i
+.PHONY : src/gameObjects/MonsterInputComponent.cpp.i
+
+src/gameObjects/MonsterInputComponent.s: src/gameObjects/MonsterInputComponent.cpp.s
+.PHONY : src/gameObjects/MonsterInputComponent.s
+
+# target to generate assembly for a file
+src/gameObjects/MonsterInputComponent.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.s
+.PHONY : src/gameObjects/MonsterInputComponent.cpp.s
+
 src/gameObjects/MovementComponent.obj: src/gameObjects/MovementComponent.cpp.obj
 .PHONY : src/gameObjects/MovementComponent.obj
 
@@ -372,6 +396,9 @@ help:
 	@echo ... src/gameObjects/GameObjectManager.obj
 	@echo ... src/gameObjects/GameObjectManager.i
 	@echo ... src/gameObjects/GameObjectManager.s
+	@echo ... src/gameObjects/MonsterInputComponent.obj
+	@echo ... src/gameObjects/MonsterInputComponent.i
+	@echo ... src/gameObjects/MonsterInputComponent.s
 	@echo ... src/gameObjects/MovementComponent.obj
 	@echo ... src/gameObjects/MovementComponent.i
 	@echo ... src/gameObjects/MovementComponent.s

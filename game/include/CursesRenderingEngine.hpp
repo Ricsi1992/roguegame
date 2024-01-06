@@ -13,6 +13,7 @@ public:
     CursesRenderingEngine();
     ~CursesRenderingEngine();
     void render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager);
+    void initGamePlay(std::shared_ptr<GameState> t_currentState);
 private:
     void drawUI();
     void drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState);

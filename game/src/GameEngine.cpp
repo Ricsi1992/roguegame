@@ -53,6 +53,7 @@ void GameEngine::handleInput()
     && GetKeyState(VK_SPACE) & IS_PRESSED)
     {
         gameState.setCurrentGameStateEnum(GameStateEnum::PLAY);
+        renderEngine.initGamePlay(gameState.getCurrentGameState());
         gameObjectManager.createPlayer(Position{3,3});
     }
 

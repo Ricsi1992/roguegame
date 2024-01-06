@@ -56,6 +56,10 @@ void GameEngine::handleInput()
         renderEngine.initGamePlay(gameState.getCurrentGameState());
         gameObjectManager.createPlayer(Position{3,3});
         gameObjectManager.createMonster(Position{5,5});
+        gameObjectManager.createMonster(Position{5,5});
+        gameObjectManager.createMonster(Position{5,5});
+        gameObjectManager.createMonster(Position{5,5});
+        gameObjectManager.createMonster(Position{5,5});
     }
 
     if (GetKeyState('Q') & IS_PRESSED)

@@ -82,6 +82,19 @@ void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, s
         mvwprintw(stdscr, centerY + 1, (x - quitText.size()) / 2, quitText.c_str());
     }
 
+    else if (t_currentState->currentGameState == GameStateEnum::LOSS)
+    {
+        erase();
+        int x = 0, y = 0;
+        getmaxyx(stdscr, y, x);
+        std::string wonText = "You lost!";
+        std::string quitText = "Press Q to quit!";
+
+        int centerY = y / 2;
+        mvwprintw(stdscr, centerY, (x - wonText.size()) / 2, wonText.c_str());
+        mvwprintw(stdscr, centerY + 1, (x - quitText.size()) / 2, quitText.c_str());
+    }
+
     refresh();
 }
 

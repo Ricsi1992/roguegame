@@ -274,6 +274,8 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C+
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cpp_type_traits.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_forced.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_init_exception.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_defines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h \
@@ -285,6 +287,7 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C+
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/memoryfwd.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/move.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/nested_exception.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/postypes.h \
@@ -306,11 +309,14 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C+
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_types.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_multimap.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_numeric.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_pair.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_raw_storage_iter.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_relops.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tempbuf.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tree.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_vector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/string_view.tcc \
@@ -343,6 +349,7 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C+
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/initializer_list \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iosfwd \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/map \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/memory \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/atomic_word.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++allocator.h \
@@ -355,6 +362,7 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: C:/CzRProg/Ricsi_programozas/C+
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/new \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/numeric \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/execution_defs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/glue_numeric_defs.h \
@@ -560,6 +568,8 @@ game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: C:/CzRProg/Ricsi_programoza
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cpp_type_traits.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_forced.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_init_exception.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_defines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h \
@@ -571,6 +581,7 @@ game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: C:/CzRProg/Ricsi_programoza
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/memoryfwd.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/move.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/nested_exception.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/postypes.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/predefined_ops.h \
@@ -588,10 +599,13 @@ game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: C:/CzRProg/Ricsi_programoza
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_types.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_multimap.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_pair.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_raw_storage_iter.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_relops.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tempbuf.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tree.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_vector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/string_view.tcc \
@@ -620,6 +634,7 @@ game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: C:/CzRProg/Ricsi_programoza
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/initializer_list \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iosfwd \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/map \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/memory \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/atomic_word.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++allocator.h \
@@ -630,6 +645,7 @@ game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: C:/CzRProg/Ricsi_programoza
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/gthr.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/new \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/execution_defs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/pstl_config.h \
@@ -772,6 +788,9 @@ game/CMakeFiles/game.dir/src/RandomGenerator.cpp.obj: C:/CzRProg/Ricsi_programoz
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdint.h
+
+game/CMakeFiles/game.dir/src/gameObjects/Direction.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/Direction.cpp \
+  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp
 
 game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/GameObjectManager.cpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
@@ -1307,6 +1326,8 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/work
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cpp_type_traits.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_forced.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_init_exception.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_defines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h \
@@ -1318,6 +1339,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/work
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/memoryfwd.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/move.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/nested_exception.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/postypes.h \
@@ -1336,10 +1358,13 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/work
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_types.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_multimap.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_pair.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_raw_storage_iter.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_relops.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tempbuf.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tree.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_vector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/string_view.tcc \
@@ -1370,6 +1395,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/work
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/initializer_list \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iosfwd \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/map \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/memory \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/atomic_word.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++allocator.h \
@@ -1380,6 +1406,7 @@ game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/work
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/gthr.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/new \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/execution_defs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/pstl_config.h \
@@ -1427,6 +1454,8 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cctype:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/error_constants.h:
@@ -1453,6 +1482,8 @@ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curse
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObjectManager.hpp:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h:
+
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/GameEngine.cpp:
@@ -1462,6 +1493,8 @@ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Mo
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tr1/modified_bessel_func.tcc:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cpp_type_traits.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_tree.h:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp:
 
@@ -1474,6 +1507,8 @@ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/utils.hpp:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/invoke.h:
 
 C:/MinGW/include/_mingw.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/map:
 
 C:/MinGW/include/alloca.h:
 
@@ -1865,6 +1900,8 @@ C:/MinGW/include/winuser.h:
 
 C:/MinGW/include/wtypes.h:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/random.h:
@@ -1873,6 +1910,10 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/random.tcc:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/specfun.h:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_map.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_multimap.h:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_numeric.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uniform_int_dist.h:
@@ -1880,6 +1921,8 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uniform_int_dist.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cmath:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ctime:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ratio:
 
@@ -1902,6 +1945,8 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tr1/riemann_zeta.tcc:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tr1/special_function_util.h:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/RandomGenerator.cpp:
+
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/Direction.cpp:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/GameObjectManager.cpp:
 

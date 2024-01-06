@@ -249,6 +249,30 @@ src/RandomGenerator.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/RandomGenerator.cpp.s
 .PHONY : src/RandomGenerator.cpp.s
 
+src/gameObjects/Direction.obj: src/gameObjects/Direction.cpp.obj
+.PHONY : src/gameObjects/Direction.obj
+
+# target to build an object file
+src/gameObjects/Direction.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/Direction.cpp.obj
+.PHONY : src/gameObjects/Direction.cpp.obj
+
+src/gameObjects/Direction.i: src/gameObjects/Direction.cpp.i
+.PHONY : src/gameObjects/Direction.i
+
+# target to preprocess a source file
+src/gameObjects/Direction.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/Direction.cpp.i
+.PHONY : src/gameObjects/Direction.cpp.i
+
+src/gameObjects/Direction.s: src/gameObjects/Direction.cpp.s
+.PHONY : src/gameObjects/Direction.s
+
+# target to generate assembly for a file
+src/gameObjects/Direction.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/Direction.cpp.s
+.PHONY : src/gameObjects/Direction.cpp.s
+
 src/gameObjects/GameObjectManager.obj: src/gameObjects/GameObjectManager.cpp.obj
 .PHONY : src/gameObjects/GameObjectManager.obj
 
@@ -393,6 +417,9 @@ help:
 	@echo ... src/RandomGenerator.obj
 	@echo ... src/RandomGenerator.i
 	@echo ... src/RandomGenerator.s
+	@echo ... src/gameObjects/Direction.obj
+	@echo ... src/gameObjects/Direction.i
+	@echo ... src/gameObjects/Direction.s
 	@echo ... src/gameObjects/GameObjectManager.obj
 	@echo ... src/gameObjects/GameObjectManager.i
 	@echo ... src/gameObjects/GameObjectManager.s

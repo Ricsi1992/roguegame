@@ -12,4 +12,6 @@ enum class Direction
     NUMBER_OF_ELEMENTS
 };
 
+Direction invertDirection(Direction const t_direction);
+
 }

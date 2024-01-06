@@ -782,6 +782,7 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: C:/CzRProg/R
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObject.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObjectManager.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
+  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MonsterInputComponent.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MovementComponent.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
   C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp \
@@ -1904,9 +1905,9 @@ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/RandomGenerator.cp
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/GameObjectManager.cpp:
 
-C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp:
-
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MonsterInputComponent.hpp:
+
+C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp:
 
 C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/gameObjects/PlayerInputComponent.cpp:
 

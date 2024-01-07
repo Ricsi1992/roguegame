@@ -54,12 +54,18 @@ void GameEngine::handleInput()
     {
         gameState.setCurrentGameStateEnum(GameStateEnum::PLAY);
         renderEngine.initGamePlay(gameState.getCurrentGameState());
-        gameObjectManager.createPlayer(Position{3,3});
-        gameObjectManager.createMonster(Position{5,5});
-        gameObjectManager.createMonster(Position{5,5});
-        gameObjectManager.createMonster(Position{5,5});
-        gameObjectManager.createMonster(Position{5,5});
-        gameObjectManager.createMonster(Position{5,5});
+        RandomGenerator* randomGenerator = RandomGenerator::getInstance();
+        int playerPosX = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.width);
+        int playerPosY = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height);
+        gameObjectManager.createPlayer(Position{playerPosX, playerPosY});
+        
+        for (int i = 0; i < randomGenerator->getRandomInt(5, 10); ++i)
+        {
+            int monsterPosX = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.width);
+            int monsterPosY = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height);
+            gameObjectManager.createMonster(Position{monsterPosX, monsterPosY});
+        }
+        
     }
 
     if (GetKeyState('Q') & IS_PRESSED)

@@ -9,6 +9,8 @@ namespace game
 void PlayerInputComponent::update()
 {
     needsUpdate = false;
+    nextCombatAction = CombatAction::NONE;
+
     if (GetKeyState('W') & IS_PRESSED)
     {
         facing = Direction::UP;
@@ -29,6 +31,12 @@ void PlayerInputComponent::update()
         facing = Direction::RIGHT;
         needsUpdate = true;
     }
+
+    if (GetKeyState(VK_SPACE) & IS_PRESSED)
+    {
+        nextCombatAction = CombatAction::MELEE;
+    }
+    
 }
 
 

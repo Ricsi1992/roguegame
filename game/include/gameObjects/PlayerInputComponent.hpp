@@ -8,7 +8,6 @@ class PlayerInputComponent: public InputComponent
 {
 public:
     virtual void update();
-
 };
 
 }

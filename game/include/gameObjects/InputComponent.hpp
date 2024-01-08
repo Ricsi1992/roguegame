@@ -2,6 +2,7 @@
 #include <memory>
 #include "GameState.hpp"
 #include "gameObjects/Direction.hpp"
+#include "gameObjects/combat/CombatAction.hpp"
 
 namespace game
 {
@@ -16,6 +17,7 @@ public:
 
 public:
     Direction facing;
+    CombatAction nextCombatAction = CombatAction::NONE;
     bool needsUpdate = false;
 };
 

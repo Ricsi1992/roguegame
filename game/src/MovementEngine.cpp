@@ -8,7 +8,6 @@ void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_
     positions.clear();
     nextPositions.clear();
 
-    t_gameObjectManager.playerObject->inputComponent->update();
     Position currentPlayerPosition = t_gameObjectManager.playerObject->movementComponent->position;
     if (t_gameObjectManager.playerObject->inputComponent->needsUpdate)
     {
@@ -25,7 +24,6 @@ void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_
 
     for (auto&& gameObject : t_gameObjectManager.gameObjects)
     {
-        gameObject->inputComponent->update();
         Position currentPosition = gameObject->movementComponent->position;
         if (gameObject->inputComponent->needsUpdate)
         {
@@ -67,8 +65,6 @@ void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_
             collidingEntities.second[i]->inputComponent->facing = invertDirection(collidingEntities.second[i]->inputComponent->facing);
             collidingEntities.second[i]->movementComponent->move(collidingEntities.second[i]->inputComponent->facing);
         }
-        
-        
     }
     
 }

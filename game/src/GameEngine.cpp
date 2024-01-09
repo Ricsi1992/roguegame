@@ -99,7 +99,7 @@ void GameEngine::update()
 
 void GameEngine::render()
 {
-    renderEngine.render(gameState.getPreviousGameState(), gameState.getCurrentGameState(), gameObjectManager);
+    renderEngine.render(gameState.getPreviousGameState(), gameState.getCurrentGameState(), gameObjectManager, combatEngine);
 
     gameState.currentStateHandled();
 }

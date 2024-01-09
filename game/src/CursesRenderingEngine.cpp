@@ -35,6 +35,7 @@ CursesRenderingEngine::CursesRenderingEngine()
     init_pair(2, COLOR_RED, COLOR_BLACK);
     init_pair(3, COLOR_GREEN, COLOR_BLACK);
     init_pair(4, COLOR_BLUE, COLOR_BLACK);
+    init_pair(5, COLOR_BLACK, COLOR_YELLOW);
 }
 
 CursesRenderingEngine::~CursesRenderingEngine()
@@ -42,7 +43,8 @@ CursesRenderingEngine::~CursesRenderingEngine()
     endwin();
 }
 
-void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager)
+void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager,
+CombatEngine const& t_combatEngine)
 {
     if (t_previousState && t_previousState->currentGameState == GameStateEnum::START && 
     t_currentState->currentGameState == GameStateEnum::PLAY)
@@ -53,7 +55,7 @@ void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, s
     
     if (t_currentState->currentGameState == GameStateEnum::PLAY)
     {
-        drawCurrentState(t_previousState, t_currentState, t_objectManager);
+        drawCurrentState(t_previousState, t_currentState, t_objectManager, t_combatEngine);
     }
     
     else if (t_currentState->currentGameState == GameStateEnum::START)
@@ -143,7 +145,8 @@ void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, 
     wrefresh(playWindow.get());
 }
 
-void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager)
+void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager,
+CombatEngine const& t_combatEngine)
 {
      if (t_previousState)
     {
@@ -155,6 +158,21 @@ void CursesRenderingEngine::drawCurrentState(std::shared_ptr<GameState> t_previo
             gameObject->movementComponent->previousPosition.x, GameUI::emptyCharacter);
         }
     }
+
+    for (auto&& meleeTarget : t_combatEngine.previousTargetPositions)
+    {
+        switchColor(true, ObjectColor::DEFAULT, playAreaWindow.get());
+        mvwaddch(playAreaWindow.get(), meleeTarget.y, meleeTarget.x, GameUI::emptyCharacter);
+        switchColor(false, ObjectColor::DEFAULT, playAreaWindow.get());
+    }
+
+    for (auto&& meleeTarget : t_combatEngine.targetPositions)
+    {
+        switchColor(true, ObjectColor::YELLOW_BG, playAreaWindow.get());
+        mvwaddch(playAreaWindow.get(), meleeTarget.y, meleeTarget.x, ' ');
+        switchColor(false, ObjectColor::YELLOW_BG, playAreaWindow.get());
+    }
+    
 
     mvwaddch(playAreaWindow.get(), t_currentState->map.end.y, t_currentState->map.end.x, GameUI::exitCharacter);
     

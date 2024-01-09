@@ -11,7 +11,8 @@ void GameObjectManager::createPlayer(Position const& t_position)
         nextIndex++,
         std::make_shared<MovementComponent>(t_position, 1),
         std::make_shared<PlayerInputComponent>(),
-        std::make_shared<RenderComponent>('@', ObjectColor::YELLOW)
+        std::make_shared<RenderComponent>('@', ObjectColor::YELLOW),
+        std::make_shared<CombatComponent>(100, 0, std::make_shared<MeleeAttack>("Sword", 100, 0.2, 3))
     );
 }
 

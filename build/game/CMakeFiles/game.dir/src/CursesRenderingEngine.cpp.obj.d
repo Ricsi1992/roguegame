@@ -125,9 +125,11 @@ game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MovementComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameUI.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/CombatComponent.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/MeleeAttack.hpp \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iostream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ostream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ios \
@@ -149,4 +151,5 @@ game/CMakeFiles/game.dir/src/CursesRenderingEngine.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\istream.tcc \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameUI.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/utils.hpp

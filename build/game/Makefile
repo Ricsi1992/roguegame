@@ -129,6 +129,30 @@ game/fast:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+src/CombatEngine.obj: src/CombatEngine.cpp.obj
+.PHONY : src/CombatEngine.obj
+
+# target to build an object file
+src/CombatEngine.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/CombatEngine.cpp.obj
+.PHONY : src/CombatEngine.cpp.obj
+
+src/CombatEngine.i: src/CombatEngine.cpp.i
+.PHONY : src/CombatEngine.i
+
+# target to preprocess a source file
+src/CombatEngine.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/CombatEngine.cpp.i
+.PHONY : src/CombatEngine.cpp.i
+
+src/CombatEngine.s: src/CombatEngine.cpp.s
+.PHONY : src/CombatEngine.s
+
+# target to generate assembly for a file
+src/CombatEngine.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/CombatEngine.cpp.s
+.PHONY : src/CombatEngine.cpp.s
+
 src/CursesRenderingEngine.obj: src/CursesRenderingEngine.cpp.obj
 .PHONY : src/CursesRenderingEngine.obj
 
@@ -248,6 +272,30 @@ src/RandomGenerator.s: src/RandomGenerator.cpp.s
 src/RandomGenerator.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/RandomGenerator.cpp.s
 .PHONY : src/RandomGenerator.cpp.s
+
+src/gameObjects/CombatComponent.obj: src/gameObjects/CombatComponent.cpp.obj
+.PHONY : src/gameObjects/CombatComponent.obj
+
+# target to build an object file
+src/gameObjects/CombatComponent.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/CombatComponent.cpp.obj
+.PHONY : src/gameObjects/CombatComponent.cpp.obj
+
+src/gameObjects/CombatComponent.i: src/gameObjects/CombatComponent.cpp.i
+.PHONY : src/gameObjects/CombatComponent.i
+
+# target to preprocess a source file
+src/gameObjects/CombatComponent.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/CombatComponent.cpp.i
+.PHONY : src/gameObjects/CombatComponent.cpp.i
+
+src/gameObjects/CombatComponent.s: src/gameObjects/CombatComponent.cpp.s
+.PHONY : src/gameObjects/CombatComponent.s
+
+# target to generate assembly for a file
+src/gameObjects/CombatComponent.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/CombatComponent.cpp.s
+.PHONY : src/gameObjects/CombatComponent.cpp.s
 
 src/gameObjects/Direction.obj: src/gameObjects/Direction.cpp.obj
 .PHONY : src/gameObjects/Direction.obj
@@ -402,6 +450,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... game
+	@echo ... src/CombatEngine.obj
+	@echo ... src/CombatEngine.i
+	@echo ... src/CombatEngine.s
 	@echo ... src/CursesRenderingEngine.obj
 	@echo ... src/CursesRenderingEngine.i
 	@echo ... src/CursesRenderingEngine.s
@@ -417,6 +468,9 @@ help:
 	@echo ... src/RandomGenerator.obj
 	@echo ... src/RandomGenerator.i
 	@echo ... src/RandomGenerator.s
+	@echo ... src/gameObjects/CombatComponent.obj
+	@echo ... src/gameObjects/CombatComponent.i
+	@echo ... src/gameObjects/CombatComponent.s
 	@echo ... src/gameObjects/Direction.obj
 	@echo ... src/gameObjects/Direction.i
 	@echo ... src/gameObjects/Direction.s

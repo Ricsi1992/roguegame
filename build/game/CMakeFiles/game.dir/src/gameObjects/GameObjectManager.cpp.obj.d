@@ -124,7 +124,31 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/CombatComponent.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/MeleeAttack.hpp \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iostream \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ostream \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ios \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ios_base.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_classes.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_classes.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\system_error \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\error_constants.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\streambuf \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\streambuf.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_ios.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_facets.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cwctype \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\ctype_base.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\streambuf_iterator.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\ctype_inline.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_facets.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_ios.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\istream \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\istream.tcc \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MonsterInputComponent.hpp

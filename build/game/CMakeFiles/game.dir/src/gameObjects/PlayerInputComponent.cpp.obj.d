@@ -118,6 +118,7 @@ game/CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
  c:\mingw\include\windows.h c:\mingw\include\windef.h \
  c:\mingw\include\winnt.h c:\mingw\include\winerror.h \
  c:\mingw\include\string.h c:\mingw\include\strings.h \

@@ -118,6 +118,7 @@ game/CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/RandomGenerator.hpp \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\random \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cmath c:\mingw\include\math.h \

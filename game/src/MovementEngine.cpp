@@ -5,6 +5,32 @@ namespace game
 
 void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_ptr<GameState> t_currentGameState)
 {
+    Position& currentPlayerPosition = t_gameObjectManager.playerObject->movementComponent->position;
+    int encodedPlayerPosition = currentPlayerPosition.y * t_currentGameState->map.width + currentPlayerPosition.x;
+
+    for (auto&& collidingEntities : nextPositions)
+    {
+        if (collidingEntities.first == encodedPlayerPosition)
+        {
+            t_currentGameState.get()->currentGameState = GameStateEnum::LOSS;
+            return;
+        }
+        
+        if (collidingEntities.second.size() <= 1)
+        {
+            continue;
+        }
+
+        for (size_t i = 1; i < collidingEntities.second.size(); ++i)
+        {
+            collidingEntities.second[i]->inputComponent->facing = invertDirection(collidingEntities.second[i]->inputComponent->facing);
+            collidingEntities.second[i]->movementComponent->move(collidingEntities.second[i]->inputComponent->facing);
+        }
+    }
+}
+
+void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::shared_ptr<GameState> t_currentGameState)
+{
     positions.clear();
     nextPositions.clear();
 
@@ -46,27 +72,6 @@ void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_
         t_currentGameState.get()->currentGameState = GameStateEnum::LOSS;
         return;
     }
-    
-    for (auto&& collidingEntities : nextPositions)
-    {
-        if (collidingEntities.first == encodedPlayerPosition)
-        {
-            t_currentGameState.get()->currentGameState = GameStateEnum::LOSS;
-            return;
-        }
-        
-        if (collidingEntities.second.size() <= 1)
-        {
-            continue;
-        }
-
-        for (size_t i = 1; i < collidingEntities.second.size(); ++i)
-        {
-            collidingEntities.second[i]->inputComponent->facing = invertDirection(collidingEntities.second[i]->inputComponent->facing);
-            collidingEntities.second[i]->movementComponent->move(collidingEntities.second[i]->inputComponent->facing);
-        }
-    }
-    
 }
 
 bool MovementEngine::wouldBeOutOfBounds(Position const& t_position, Direction const t_facing, int const t_maxWidth, int const t_maxHeight)

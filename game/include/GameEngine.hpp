@@ -3,6 +3,7 @@
 #include "GameStateHandler.hpp"
 #include "CursesRenderingEngine.hpp"
 #include "MovementEngine.hpp"
+#include "CombatEngine.hpp"
 #include "gameObjects/GameObjectManager.hpp"
 
 namespace game {
@@ -28,6 +29,7 @@ class GameEngine {
         CursesRenderingEngine renderEngine;
         GameObjectManager gameObjectManager;
         MovementEngine movementEngine;
+        CombatEngine combatEngine;
 };
 
 }

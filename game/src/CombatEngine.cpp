@@ -66,6 +66,29 @@ void CombatEngine::handleMeleeAttack(std::shared_ptr<GameObject> t_playerObject,
         break;
     }
 
+    for (int y = 0; y < yMax; ++y)
+    {
+        for (int x = 0; x < xMax; ++x)
+        {
+            Position targetPosition = Position{attackBoxTopLeft.x + x, attackBoxTopLeft.y + y};
+
+            int encodedPosition = targetPosition.y * t_currentGameState->map.width + targetPosition.x;
+            targetPositions.emplace_back(targetPosition);
+
+            if (t_currentPositions.count(encodedPosition) == 0)
+            {
+                continue;
+            }
+            
+            for (auto&& object : t_currentPositions.at(encodedPosition))
+            {
+                if (object->combatComponent)
+                {
+                    object->markedForDeletion = object->combatComponent->sustainMeleeAttack(meleeAttack);
+                }
+            }
+        }
+    } 
 }
 
 }

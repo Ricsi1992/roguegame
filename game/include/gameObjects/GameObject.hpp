@@ -18,7 +18,7 @@ public:
         std::shared_ptr<MovementComponent> t_movementComponent,
         std::shared_ptr<InputComponent> t_inputComponent, 
         std::shared_ptr<RenderComponent> t_renderComponent,
-        std::shared_ptr<CombatComponent> t_combatComponent) :
+        std::shared_ptr<CombatComponent> t_combatComponent = nullptr) :
         index(t_index), 
         movementComponent(t_movementComponent),
         inputComponent(t_inputComponent),
@@ -26,6 +26,7 @@ public:
         combatComponent(t_combatComponent) {}
 public:
         std::uint32_t index;
+        bool markedForDeletion = false;
         std::shared_ptr<MovementComponent> movementComponent;
         std::shared_ptr<InputComponent> inputComponent;
         std::shared_ptr<RenderComponent> renderComponent;

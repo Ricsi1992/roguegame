@@ -86,6 +86,8 @@ void GameEngine::update()
             gameObject->inputComponent->update();
         }
         
+        movementEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState());
+        combatEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState(), movementEngine.positions);
         movementEngine.update(gameObjectManager, gameState.getCurrentGameState());
 
         if (gameObjectManager.playerObject->movementComponent->position == gameState.getCurrentGameState()->map.end)

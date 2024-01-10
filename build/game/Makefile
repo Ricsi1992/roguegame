@@ -441,6 +441,30 @@ src/main.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/utils.obj: src/utils.cpp.obj
+.PHONY : src/utils.obj
+
+# target to build an object file
+src/utils.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/utils.cpp.obj
+.PHONY : src/utils.cpp.obj
+
+src/utils.i: src/utils.cpp.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -489,6 +513,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/utils.obj
+	@echo ... src/utils.i
+	@echo ... src/utils.s
 .PHONY : help
 
 

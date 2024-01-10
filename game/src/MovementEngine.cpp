@@ -50,6 +50,11 @@ void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::s
 
     for (auto&& gameObject : t_gameObjectManager.gameObjects)
     {
+        if (gameObject->markedForDeletion)
+        {
+            continue;
+        }
+        
         Position currentPosition = gameObject->movementComponent->position;
         if (gameObject->inputComponent->needsUpdate)
         {

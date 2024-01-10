@@ -43,6 +43,7 @@ void GameEngine::gameLoop()
             handleInput();
             update();
             render();
+            cleanUp();
         }
     }
 }
@@ -65,7 +66,6 @@ void GameEngine::handleInput()
             int monsterPosY = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height);
             gameObjectManager.createMonster(Position{monsterPosX, monsterPosY});
         }
-        
     }
 
     if (GetKeyState('Q') & IS_PRESSED)
@@ -90,6 +90,8 @@ void GameEngine::update()
         combatEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState(), movementEngine.positions);
         movementEngine.update(gameObjectManager, gameState.getCurrentGameState());
 
+        gameObjectManager.prepareCleanUp();
+
         if (gameObjectManager.playerObject->movementComponent->position == gameState.getCurrentGameState()->map.end)
         {
             gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
@@ -107,6 +109,11 @@ void GameEngine::render()
 int GameEngine::finish()
 {
     return 0;
-} 
+}
+
+void GameEngine::cleanUp()
+{
+    gameObjectManager.cleanUp();
+}
 
 }

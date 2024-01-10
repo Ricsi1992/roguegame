@@ -20,6 +20,7 @@ class GameEngine {
         void handleInput();
         void update();
         void render();
+        void cleanUp();
 
         int finish();
     

@@ -1,6 +1,6 @@
-game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
- C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\gameObjects\GameObjectManager.cpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObjectManager.hpp \
+game/CMakeFiles/game.dir/src/utils.cpp.obj: \
+ C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\utils.cpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/utils.hpp \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\vector \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_algobase.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\c++config.h \
@@ -48,9 +48,9 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\functional_hash.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\range_access.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\vector.tcc \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\memory \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_tempbuf.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_raw_storage_iter.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iostream \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ostream \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ios \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iosfwd \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stringfwd.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\postypes.h \
@@ -65,20 +65,6 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  c:\mingw\include\sys/stat.h c:\mingw\include\conio.h \
  c:\mingw\include\io.h c:\mingw\include\stdint.h c:\mingw\include\time.h \
  c:\mingw\include\locale.h c:\mingw\include\process.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\atomicity.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\gthr.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\gthr-default.h \
- c:\mingw\include\errno.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\atomic_word.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\concurrence.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_function.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\backward\binders.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\uses_allocator.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\unique_ptr.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\tuple \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\array \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\stdexcept \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\string \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\char_traits.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cstdint \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\stdint.h \
@@ -89,8 +75,18 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  c:\mingw\include\locale.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cctype \
  c:\mingw\include\ctype.h c:\mingw\include\wctype.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ios_base.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\atomicity.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\gthr.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\gthr-default.h \
+ c:\mingw\include\errno.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\atomic_word.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_classes.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\string \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream_insert.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\cxxabi_forced.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_function.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\backward\binders.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_string.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\string_view \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\limits \
@@ -104,39 +100,10 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  c:\mingw\include\stdio.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cerrno \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_string.tcc \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\invoke.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\shared_ptr.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\shared_ptr_base.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\allocated_ptr.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\refwrap.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\aligned_buffer.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\shared_ptr_atomic.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\atomic_base.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\atomic_lockfree_defines.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\backward\auto_ptr.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\glue_memory_defs.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\execution_defs.h \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObject.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MovementComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/CombatComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/MeleeAttack.hpp \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iostream \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ostream \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ios \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ios_base.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_classes.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\locale_classes.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\system_error \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\error_constants.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\stdexcept \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\streambuf \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\streambuf.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_ios.h \
@@ -150,7 +117,4 @@ game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\istream.tcc \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/PlayerInputComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MonsterInputComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/utils.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h

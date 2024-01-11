@@ -52,4 +52,15 @@ void GameObjectManager::cleanUp()
     utils::remove_index(gameObjects, indicesToDelete);
 }
 
+void GameObjectManager::loadRoomObjects(std::vector<int> const& t_room, std::shared_ptr<GameState> t_gameState)
+{
+    auto&& currentRoom = t_gameState->level.rooms[t_gameState->level.currentRoomIndex];
+    if (!playerObject)
+    {
+        createPlayer(Position{currentRoom.width / 2, currentRoom.height - 1});
+    }
+
+    gameObjects.clear();
+}
+
 }

@@ -3,6 +3,7 @@
 #undef MOUSE_MOVED
 #include "GameEngine.hpp"
 #include "RandomGenerator.hpp"
+#include "LevelGenerator.hpp"
 
 namespace game
 {
@@ -54,25 +55,17 @@ void GameEngine::handleInput()
     && GetKeyState(VK_SPACE) & IS_PRESSED)
     {
         gameState.setCurrentGameStateEnum(GameStateEnum::PLAY);
+
+        auto&& currentGameState = gameState.getCurrentGameState();
+        currentGameState->level = LevelGenerator::generateLevel(currentGameState->difficultyLevel);
+        currentGameState->level.visitedRooms[currentGameState->level.currentRoomIndex] = true;
         renderEngine.initGamePlay(gameState.getCurrentGameState());
-        RandomGenerator* randomGenerator = RandomGenerator::getInstance();
-        int playerPosX = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.width);
-        int playerPosY = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height);
-        gameObjectManager.createPlayer(Position{playerPosX, playerPosY});
-        
-        for (int i = 0; i < randomGenerator->getRandomInt(5, 10); ++i)
-        {
-            int monsterPosX = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.width);
-            int monsterPosY = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height);
-            gameObjectManager.createMonster(Position{monsterPosX, monsterPosY});
-        }
     }
 
     if (GetKeyState('Q') & IS_PRESSED)
     {
         gameState.setPlayerQuit(true);
     }
-    
 }
 
 void GameEngine::update()

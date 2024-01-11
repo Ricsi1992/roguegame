@@ -11,6 +11,7 @@ struct GameState
     bool quit = false;
     GameStateEnum currentGameState = GameStateEnum::START;
     Map map;
+    int difficulty = 0;
 };
 
     

@@ -7,8 +7,10 @@ namespace game
 
 struct Level
 {
-    std::vector<bool> layout;
-    std::vector<bool> visitedRooms;
+    typedef std::vector<bool> LevelLayout;
+    
+    LevelLayout layout;
+    LevelLayout visitedRooms;
     std::vector<Room> rooms;
     int dimensions = -1;
     int currentRoomIndex = -1;

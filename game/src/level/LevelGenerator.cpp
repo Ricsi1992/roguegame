@@ -1,19 +1,55 @@
 #include "level/LevelGenerator.hpp"
 #include "Position.hpp"
 #include "RandomGenerator.hpp"
+#include "level/RoomGenerator.hpp"
 
 namespace game
 {
     
-Level LevelGenerator::generateLevel(int const t_difficulty, float const t_maxRoomVariability = 0.3)
+Level generateLevel(int t_difficulty, float t_maxRoomVariability)
 {
     Level newLevel;
     int targetDimension = 3;
     int targetMaxRooms = 5;
     int targetWalkerCount = 2;
+
+    auto&& randomGenerator = RandomGenerator::getInstance();
+    int maxRooms = randomGenerator->getRandomInt(targetMaxRooms * t_maxRoomVariability,
+    targetMaxRooms * (1 + t_maxRoomVariability));
+    newLevel.dimensions = targetDimension;
+    newLevel.roomCount = maxRooms;
+    newLevel.layout = generateLevelLayout(targetDimension, maxRooms, targetWalkerCount);
+
+    for (int i = 0; i < static_cast<int>(newLevel.layout.size()); ++i)
+    {
+        if (!newLevel.layout[i])
+        {
+            newLevel.rooms.emplace_back(Room());
+        }
+
+        newLevel.currentRoomIndex = i;
+
+        int width = randomGenerator->getRandomInt(40, 60);
+        int height = randomGenerator->getRandomInt(15, 30);
+        newLevel.rooms.emplace_back(Room{
+            width,
+            height,
+            RoomGenerator::generateRoomLayout(width, height, t_difficulty),
+            {
+                {Direction::UP, (i - targetDimension) > 0 && newLevel.layout[i - targetDimension] == true},
+                {Direction::RIGHT, (i + 1) < static_cast<int>(newLevel.layout.size()) 
+                && (i + 1) % targetDimension != 0 && newLevel.layout[i + 1] == true},
+                {Direction::DOWN, (i + targetDimension) < static_cast<int>(newLevel.layout.size()) 
+                && newLevel.layout[i + targetDimension] == true},
+                {Direction::LEFT, (i - 1) > 0 && i % targetDimension != 0 && newLevel.layout[i - 1] == true},
+            },
+            true,
+            false
+        });
+    }
 }
 
-Level::LevelLayout LevelGenerator::generateLevelLayout(int const t_dimensions, int const t_maxRooms, int const t_walkerCount)
+static Level::LevelLayout generateLevelLayout(int const t_dimensions, int const t_maxRooms, int const t_walkerCount)
 {
     Level::LevelLayout rooms(t_dimensions * t_dimensions);
 

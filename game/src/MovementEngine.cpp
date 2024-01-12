@@ -6,7 +6,8 @@ namespace game
 void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_ptr<GameState> t_currentGameState)
 {
     Position& currentPlayerPosition = t_gameObjectManager.playerObject->movementComponent->position;
-    int encodedPlayerPosition = currentPlayerPosition.y * t_currentGameState->map.width + currentPlayerPosition.x;
+    auto&& currentRoom = t_currentGameState->level.rooms[t_currentGameState->level.currentRoomIndex];
+    int encodedPlayerPosition = currentPlayerPosition.y * currentRoom.width + currentPlayerPosition.x;
 
     for (auto&& collidingEntities : nextPositions)
     {
@@ -35,18 +36,19 @@ void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::s
     nextPositions.clear();
 
     Position currentPlayerPosition = t_gameObjectManager.playerObject->movementComponent->position;
+    auto&& currentRoom = t_currentGameState->level.rooms[t_currentGameState->level.currentRoomIndex];
     if (t_gameObjectManager.playerObject->inputComponent->needsUpdate)
     {
         if(!wouldBeOutOfBounds(
             t_gameObjectManager.playerObject->movementComponent->position, 
             t_gameObjectManager.playerObject->inputComponent->facing,
-            t_currentGameState->map.width, 
-            t_currentGameState->map.height))
+            currentRoom.width, 
+            currentRoom.height))
         {
         t_gameObjectManager.playerObject->movementComponent->move(t_gameObjectManager.playerObject->inputComponent->facing);
         }
     }
-    int encodedPlayerPosition = currentPlayerPosition.y * t_currentGameState->map.width + currentPlayerPosition.x;
+    int encodedPlayerPosition = currentPlayerPosition.y * currentRoom.width + currentPlayerPosition.x;
 
     for (auto&& gameObject : t_gameObjectManager.gameObjects)
     {
@@ -61,14 +63,14 @@ void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::s
             if(wouldBeOutOfBounds(
             gameObject->movementComponent->position, 
             gameObject->inputComponent->facing,
-            t_currentGameState->map.width, 
-            t_currentGameState->map.height))
+            currentRoom.width, 
+            currentRoom.height))
             {
                 continue;
             }
             Position nextPosition = gameObject->movementComponent->move(gameObject->inputComponent->facing);
-            positions[currentPosition.y * t_currentGameState->map.width + currentPosition.x].emplace_back(gameObject);
-            nextPositions[nextPosition.y * t_currentGameState->map.width + nextPosition.x].emplace_back(gameObject);
+            positions[currentPosition.y * currentRoom.width + currentPosition.x].emplace_back(gameObject);
+            nextPositions[nextPosition.y * currentRoom.width + nextPosition.x].emplace_back(gameObject);
         }
     }
 

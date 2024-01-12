@@ -60,6 +60,9 @@ void GameEngine::handleInput()
         currentGameState->level = LevelGenerator::generateLevel(currentGameState->difficultyLevel);
         currentGameState->level.visitedRooms[currentGameState->level.currentRoomIndex] = true;
         renderEngine.initGamePlay(gameState.getCurrentGameState());
+
+        auto&& currentRoom = currentGameState->level.rooms[currentGameState->level.currentRoomIndex];
+        gameObjectManager.loadRoomObjects(currentRoom.roomLayout, currentGameState);
     }
 
     if (GetKeyState('Q') & IS_PRESSED)
@@ -85,10 +88,10 @@ void GameEngine::update()
 
         gameObjectManager.prepareCleanUp();
 
-        if (gameObjectManager.playerObject->movementComponent->position == gameState.getCurrentGameState()->map.end)
-        {
-            gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
-        }
+        // if (gameObjectManager.playerObject->movementComponent->position == gameState.getCurrentGameState()->map.end)
+        // {
+        //     gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
+        // }
     }
 }
 

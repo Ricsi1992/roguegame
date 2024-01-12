@@ -61,6 +61,24 @@ void GameObjectManager::loadRoomObjects(std::vector<int> const& t_room, std::sha
     }
 
     gameObjects.clear();
+
+    for (int y = 0; y < currentRoom.height; ++y)
+    {
+        for (int x = 0; x < currentRoom.width; ++x)
+        {
+            auto&& currentCoordinate = t_room[y * currentRoom.width + x];
+            switch (currentCoordinate)
+            {
+            case 1:
+                createMonster(Position{x, y});
+                break;
+            default:
+                break;
+            }
+        }
+        
+    }
+    
 }
 
 }

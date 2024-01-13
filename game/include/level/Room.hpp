@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include<map>
-#include "Direction.hpp"
+#include "gameObjects/Direction.hpp"
 
 namespace game
 {

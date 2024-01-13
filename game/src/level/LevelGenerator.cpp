@@ -6,7 +6,7 @@
 namespace game
 {
     
-Level generateLevel(int t_difficulty, float t_maxRoomVariability)
+Level LevelGenerator::generateLevel(int t_difficulty, float t_maxRoomVariability)
 {
     Level newLevel;
     int targetDimension = 3;
@@ -47,9 +47,11 @@ Level generateLevel(int t_difficulty, float t_maxRoomVariability)
             false
         });
     }
+    newLevel.visitedRooms = std::vector<bool>(newLevel.rooms.size(), false);
+    return newLevel;
 }
 
-static Level::LevelLayout generateLevelLayout(int const t_dimensions, int const t_maxRooms, int const t_walkerCount)
+Level::LevelLayout LevelGenerator::generateLevelLayout(int const t_dimensions, int const t_maxRooms, int const t_walkerCount)
 {
     Level::LevelLayout rooms(t_dimensions * t_dimensions);
 

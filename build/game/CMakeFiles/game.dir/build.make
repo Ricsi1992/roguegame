@@ -248,11 +248,41 @@ game/CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.s"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\gameObjects\PlayerInputComponent.cpp -o CMakeFiles\game.dir\src\gameObjects\PlayerInputComponent.cpp.s
 
+game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
+game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/level/LevelGenerator.cpp
+game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj -MF CMakeFiles\game.dir\src\level\LevelGenerator.cpp.obj.d -o CMakeFiles\game.dir\src\level\LevelGenerator.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\level\LevelGenerator.cpp
+
+game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game.dir/src/level/LevelGenerator.cpp.i"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\level\LevelGenerator.cpp > CMakeFiles\game.dir\src\level\LevelGenerator.cpp.i
+
+game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/level/LevelGenerator.cpp.s"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\level\LevelGenerator.cpp -o CMakeFiles\game.dir\src\level\LevelGenerator.cpp.s
+
+game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
+game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/level/RoomGenerator.cpp
+game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj -MF CMakeFiles\game.dir\src\level\RoomGenerator.cpp.obj.d -o CMakeFiles\game.dir\src\level\RoomGenerator.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\level\RoomGenerator.cpp
+
+game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game.dir/src/level/RoomGenerator.cpp.i"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\level\RoomGenerator.cpp > CMakeFiles\game.dir\src\level\RoomGenerator.cpp.i
+
+game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/level/RoomGenerator.cpp.s"
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\level\RoomGenerator.cpp -o CMakeFiles\game.dir\src\level\RoomGenerator.cpp.s
+
 game/CMakeFiles/game.dir/src/main.cpp.obj: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/main.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
 game/CMakeFiles/game.dir/src/main.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/main.cpp
 game/CMakeFiles/game.dir/src/main.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object game/CMakeFiles/game.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object game/CMakeFiles/game.dir/src/main.cpp.obj"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/main.cpp.obj -MF CMakeFiles\game.dir\src\main.cpp.obj.d -o CMakeFiles\game.dir\src\main.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\main.cpp
 
 game/CMakeFiles/game.dir/src/main.cpp.i: cmake_force
@@ -267,7 +297,7 @@ game/CMakeFiles/game.dir/src/utils.cpp.obj: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/utils.cpp.obj: game/CMakeFiles/game.dir/includes_CXX.rsp
 game/CMakeFiles/game.dir/src/utils.cpp.obj: C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/src/utils.cpp
 game/CMakeFiles/game.dir/src/utils.cpp.obj: game/CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object game/CMakeFiles/game.dir/src/utils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object game/CMakeFiles/game.dir/src/utils.cpp.obj"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT game/CMakeFiles/game.dir/src/utils.cpp.obj -MF CMakeFiles\game.dir\src\utils.cpp.obj.d -o CMakeFiles\game.dir\src\utils.cpp.obj -c C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\game\src\utils.cpp
 
 game/CMakeFiles/game.dir/src/utils.cpp.i: cmake_force
@@ -292,6 +322,8 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.obj" \
 "CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj" \
 "CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.obj" \
+"CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj" \
+"CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj" \
 "CMakeFiles/game.dir/src/main.cpp.obj" \
 "CMakeFiles/game.dir/src/utils.cpp.obj"
 
@@ -310,13 +342,15 @@ bin/game.exe: game/CMakeFiles/game.dir/src/gameObjects/GameObjectManager.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/gameObjects/MonsterInputComponent.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/gameObjects/MovementComponent.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.obj
+bin/game.exe: game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj
+bin/game.exe: game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/main.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/src/utils.cpp.obj
 bin/game.exe: game/CMakeFiles/game.dir/build.make
 bin/game.exe: game/CMakeFiles/game.dir/linkLibs.rsp
 bin/game.exe: game/CMakeFiles/game.dir/objects1.rsp
 bin/game.exe: game/CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ..\bin\game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable ..\bin\game.exe"
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\game.dir\link.txt --verbose=$(VERBOSE)
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build\game && "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/windows/pdcurses/pdcurses.dll C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/build/bin
 

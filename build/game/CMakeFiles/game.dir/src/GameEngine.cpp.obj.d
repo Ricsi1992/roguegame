@@ -177,14 +177,23 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\pstl\glue_memory_defs.h \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Position.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/level/Level.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/level/Room.hpp \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\map \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_tree.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\node_handle.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\optional \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\enable_special_members.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_map.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_multimap.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\erase_if.h \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/CursesRenderingEngine.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/libs/include/pdcurses/curses.h \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObjectManager.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/GameObject.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/MovementComponent.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/Direction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
@@ -213,13 +222,7 @@ game/CMakeFiles/game.dir/src/GameEngine.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\istream.tcc \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/CombatEngine.hpp \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\map \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_tree.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\node_handle.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\optional \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\enable_special_members.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_map.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_multimap.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\erase_if.h \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/MovementEngine.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/RandomGenerator.hpp
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/RandomGenerator.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/level/LevelGenerator.hpp \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bitset

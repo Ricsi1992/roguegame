@@ -132,7 +132,8 @@ game/CMakeFiles/game.dir/src/MovementEngine.cpp.obj: \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/InputComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameState.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/GameStateEnum.hpp \
- C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/Map.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/level/Level.hpp \
+ C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/level/Room.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/combat/CombatAction.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/RenderComponent.hpp \
  C:/CzRProg/Ricsi_programozas/C++/workspace/roguegame/game/include/gameObjects/ObjectColor.hpp \

@@ -417,6 +417,54 @@ src/gameObjects/PlayerInputComponent.cpp.s:
 	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/gameObjects/PlayerInputComponent.cpp.s
 .PHONY : src/gameObjects/PlayerInputComponent.cpp.s
 
+src/level/LevelGenerator.obj: src/level/LevelGenerator.cpp.obj
+.PHONY : src/level/LevelGenerator.obj
+
+# target to build an object file
+src/level/LevelGenerator.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.obj
+.PHONY : src/level/LevelGenerator.cpp.obj
+
+src/level/LevelGenerator.i: src/level/LevelGenerator.cpp.i
+.PHONY : src/level/LevelGenerator.i
+
+# target to preprocess a source file
+src/level/LevelGenerator.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.i
+.PHONY : src/level/LevelGenerator.cpp.i
+
+src/level/LevelGenerator.s: src/level/LevelGenerator.cpp.s
+.PHONY : src/level/LevelGenerator.s
+
+# target to generate assembly for a file
+src/level/LevelGenerator.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/level/LevelGenerator.cpp.s
+.PHONY : src/level/LevelGenerator.cpp.s
+
+src/level/RoomGenerator.obj: src/level/RoomGenerator.cpp.obj
+.PHONY : src/level/RoomGenerator.obj
+
+# target to build an object file
+src/level/RoomGenerator.cpp.obj:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.obj
+.PHONY : src/level/RoomGenerator.cpp.obj
+
+src/level/RoomGenerator.i: src/level/RoomGenerator.cpp.i
+.PHONY : src/level/RoomGenerator.i
+
+# target to preprocess a source file
+src/level/RoomGenerator.cpp.i:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.i
+.PHONY : src/level/RoomGenerator.cpp.i
+
+src/level/RoomGenerator.s: src/level/RoomGenerator.cpp.s
+.PHONY : src/level/RoomGenerator.s
+
+# target to generate assembly for a file
+src/level/RoomGenerator.cpp.s:
+	cd /d C:\CzRProg\Ricsi_programozas\C++\workspace\roguegame\build && $(MAKE) $(MAKESILENT) -f game\CMakeFiles\game.dir\build.make game/CMakeFiles/game.dir/src/level/RoomGenerator.cpp.s
+.PHONY : src/level/RoomGenerator.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -510,6 +558,12 @@ help:
 	@echo ... src/gameObjects/PlayerInputComponent.obj
 	@echo ... src/gameObjects/PlayerInputComponent.i
 	@echo ... src/gameObjects/PlayerInputComponent.s
+	@echo ... src/level/LevelGenerator.obj
+	@echo ... src/level/LevelGenerator.i
+	@echo ... src/level/LevelGenerator.s
+	@echo ... src/level/RoomGenerator.obj
+	@echo ... src/level/RoomGenerator.i
+	@echo ... src/level/RoomGenerator.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

@@ -3,7 +3,7 @@
 #undef MOUSE_MOVED
 #include "GameEngine.hpp"
 #include "RandomGenerator.hpp"
-#include "LevelGenerator.hpp"
+#include "level/LevelGenerator.hpp"
 
 namespace game
 {
@@ -24,9 +24,6 @@ void GameEngine::init()
 
     RandomGenerator* randomGenerator = RandomGenerator::getInstance();
     randomGenerator->setSeed(currentTime.time_since_epoch().count());
-
-    gameState.getCurrentGameState()->map.end.x = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.width-2);
-    gameState.getCurrentGameState()->map.end.y = randomGenerator->getRandomInt(1, gameState.getCurrentGameState()->map.height-2);
 }
 
 void GameEngine::gameLoop()

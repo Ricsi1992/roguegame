@@ -102,9 +102,10 @@ CombatEngine const& t_combatEngine)
 
 void CursesRenderingEngine::initGamePlay(std::shared_ptr<GameState> t_currentState)
 {
-    int playTopLeftX = (GameUI::playAreaWidth - t_currentState->map.width) / 2;
-    int playTopLeftY = (GameUI::playAreaHeight - t_currentState->map.height) / 2;
-    playAreaWindow = std::unique_ptr<WINDOW>(newwin(t_currentState->map.height, t_currentState->map.width,
+    auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
+    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
+    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
+    playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width,
     playTopLeftY, playTopLeftX));
     playWindow = std::unique_ptr<WINDOW>(newwin(GameUI::playAreaHeight, GameUI::playAreaWidth, GameUI::topLeft.y, GameUI::topLeft.x));
 
@@ -129,10 +130,11 @@ void CursesRenderingEngine::drawUI()
 
 void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
 {
-    int playTopLeftX = (GameUI::playAreaWidth - t_currentState->map.width) / 2 - 1;
-    int playTopLeftY = (GameUI::playAreaHeight - t_currentState->map.height) / 2 - 1;
-    int playBottomRightX = playTopLeftX + 1 + t_currentState->map.width;
-    int playBottomRightY = playTopLeftY + 1 + t_currentState->map.height;
+    auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
+    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
+    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
+    int playBottomRightX = playTopLeftX + 1 + currentRoom.width;
+    int playBottomRightY = playTopLeftY + 1 + currentRoom.height;
     
     mvwhline(playWindow.get(), playTopLeftY, playTopLeftX, 0, playBottomRightX - playTopLeftX);
     mvwhline(playWindow.get(), playBottomRightY, playTopLeftX, 0, playBottomRightX - playTopLeftX);
@@ -174,7 +176,7 @@ CombatEngine const& t_combatEngine)
     }
     
 
-    mvwaddch(playAreaWindow.get(), t_currentState->map.end.y, t_currentState->map.end.x, GameUI::exitCharacter);
+    //mvwaddch(playAreaWindow.get(), t_currentState->map.end.y, t_currentState->map.end.x, GameUI::exitCharacter);
     
     drawObject(t_objectManager.playerObject);
     

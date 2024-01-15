@@ -17,7 +17,7 @@ public:
     CombatEngine const& t_combatEngine);
     void initGamePlay(std::shared_ptr<GameState> t_currentState);
 private:
-    void drawUI();
+    void drawUI(std::shared_ptr<GameState> t_currentState);
     void drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState);
     void drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager,
     CombatEngine const& t_combatEngine);

@@ -25,12 +25,13 @@ Level LevelGenerator::generateLevel(int t_difficulty, float t_maxRoomVariability
         if (!newLevel.layout[i])
         {
             newLevel.rooms.emplace_back(Room());
+            continue;
         }
 
         newLevel.currentRoomIndex = i;
 
         int width = randomGenerator->getRandomInt(40, 60);
-        int height = randomGenerator->getRandomInt(15, 30);
+        int height = randomGenerator->getRandomInt(10, 15);
         newLevel.rooms.emplace_back(Room{
             width,
             height,

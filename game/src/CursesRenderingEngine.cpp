@@ -46,15 +46,18 @@ CursesRenderingEngine::~CursesRenderingEngine()
 void CursesRenderingEngine::render(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager,
 CombatEngine const& t_combatEngine)
 {
-    if (t_previousState && t_previousState->currentGameState == GameStateEnum::START && 
-    t_currentState->currentGameState == GameStateEnum::PLAY)
+    if(t_currentState->currentGameState == GameStateEnum::PLAY)
     {
-        drawUI();
-        drawMap(t_previousState, t_currentState);
-    }
-    
-    if (t_currentState->currentGameState == GameStateEnum::PLAY)
-    {
+        if(t_previousState->level.currentRoomIndex != t_currentState->level.currentRoomIndex)
+        {
+            werase(playWindow.get());
+            drawUI(t_currentState);
+            drawMap(t_previousState, t_currentState);
+            auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
+            int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
+            int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
+            playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width, playTopLeftY, playTopLeftX));
+        }
         drawCurrentState(t_previousState, t_currentState, t_objectManager, t_combatEngine);
     }
     
@@ -116,11 +119,49 @@ void CursesRenderingEngine::initGamePlay(std::shared_ptr<GameState> t_currentSta
     GameUI::topLeft.y + GameUI::playAreaHeight, GameUI::topLeft.x + GameUI::mapAreaWidth));
 }
 
-void CursesRenderingEngine::drawUI() 
+void CursesRenderingEngine::drawUI(std::shared_ptr<GameState> t_currentState) 
 {
     box(playWindow.get(), '#', '#');
     wrefresh(playWindow.get());
 
+    int roomSizeWidth = 3;
+    int roomSizeHeight = 3;
+
+    int const& dimensions = t_currentState->level.dimensions;
+    int const& currentRoomIndex = t_currentState->level.currentRoomIndex;
+    Level::LevelLayout rooms = t_currentState->level.layout;
+    Level::LevelLayout visitedRooms = t_currentState->level.visitedRooms;
+
+    int centerX = GameUI::mapAreaWidth / 2;
+    int centerY = GameUI::mapAreaHeight / 2;
+
+    int currentRoomY = currentRoomIndex / dimensions;
+    int currentRoomX = currentRoomIndex % dimensions;
+
+    int topLeftMapGridX = centerX - currentRoomX * roomSizeHeight;
+    int topLeftMapGridY = centerY - currentRoomY * roomSizeWidth;
+
+    int roomIndex = 0;
+    for (int y = topLeftMapGridY; y < topLeftMapGridY + dimensions * roomSizeWidth; y += roomSizeWidth)
+    {
+        for (int x = topLeftMapGridX; x < topLeftMapGridX + dimensions * roomSizeHeight; x += roomSizeHeight)
+        {
+            if (y <= roomSizeWidth / 2 || x <= roomSizeHeight / 2 || y >= GameUI::mapAreaWidth - roomSizeWidth / 2
+            || x >= GameUI::mapAreaHeight - roomSizeHeight / 2)
+            {
+                ++roomIndex;
+                continue;
+            }
+            
+            if (rooms[roomIndex])
+            {
+                //TODO draw room rectangle
+            }
+            ++roomIndex;
+        }
+    }
+    
+    
     box(mapWindow.get(), '1', '1');
     wrefresh(mapWindow.get());
 

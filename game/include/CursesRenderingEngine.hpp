@@ -22,6 +22,7 @@ private:
     void drawCurrentState(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState, GameObjectManager const& t_objectManager,
     CombatEngine const& t_combatEngine);
     void drawObject(std::shared_ptr<GameObject> t_gameObject);
+    void drawDoors(std::shared_ptr<GameState> t_currentState);
 private:
     std::unique_ptr<WINDOW> playWindow;
     std::unique_ptr<WINDOW> playAreaWindow;

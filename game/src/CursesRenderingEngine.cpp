@@ -20,6 +20,20 @@ void switchColor(bool t_isOn, ObjectColor const t_color, WINDOW* t_window)
         wattroff(t_window, COLOR_PAIR(static_cast<int>(t_color)));
     }
 }
+
+void printRectangle(int const t_playTopLeftX, int const t_playTopLeftY, int const t_playBottomRightX, 
+int const t_playBottomRightY, WINDOW* t_window)
+{
+    mvwhline(t_window, t_playTopLeftY, t_playTopLeftX, 0, t_playBottomRightX - t_playTopLeftX);
+    mvwhline(t_window, t_playBottomRightY, t_playTopLeftX, 0, t_playBottomRightX - t_playTopLeftX);
+    mvwvline(t_window, t_playTopLeftY, t_playTopLeftX, 0 , t_playBottomRightY - t_playTopLeftY);
+    mvwvline(t_window, t_playTopLeftY, t_playBottomRightX, 0 , t_playBottomRightY - t_playTopLeftY);
+    mvwaddch(t_window, t_playTopLeftY, t_playTopLeftX, ACS_ULCORNER);
+    mvwaddch(t_window, t_playBottomRightY, t_playTopLeftX, ACS_LLCORNER);
+    mvwaddch(t_window, t_playTopLeftY, t_playBottomRightX, ACS_URCORNER);
+    mvwaddch(t_window, t_playBottomRightY, t_playBottomRightX, ACS_LRCORNER);
+}
+
 }
 
 CursesRenderingEngine::CursesRenderingEngine() 
@@ -54,9 +68,9 @@ CombatEngine const& t_combatEngine)
             drawUI(t_currentState);
             drawMap(t_previousState, t_currentState);
             auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
-            int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
-            int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
-            playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width, playTopLeftY, playTopLeftX));
+            int t_playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
+            int t_playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
+            playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width, t_playTopLeftY, t_playTopLeftX));
         }
         drawCurrentState(t_previousState, t_currentState, t_objectManager, t_combatEngine);
     }
@@ -106,10 +120,10 @@ CombatEngine const& t_combatEngine)
 void CursesRenderingEngine::initGamePlay(std::shared_ptr<GameState> t_currentState)
 {
     auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
-    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
-    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
+    int t_playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
+    int t_playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
     playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width,
-    playTopLeftY, playTopLeftX));
+    t_playTopLeftY, t_playTopLeftX));
     playWindow = std::unique_ptr<WINDOW>(newwin(GameUI::playAreaHeight, GameUI::playAreaWidth, GameUI::topLeft.y, GameUI::topLeft.x));
 
     mapWindow = std::unique_ptr<WINDOW>(newwin(GameUI::mapAreaHeight, GameUI::mapAreaWidth, 
@@ -147,7 +161,7 @@ void CursesRenderingEngine::drawUI(std::shared_ptr<GameState> t_currentState)
         for (int x = topLeftMapGridX; x < topLeftMapGridX + dimensions * roomSizeHeight; x += roomSizeHeight)
         {
             if (y <= roomSizeWidth / 2 || x <= roomSizeHeight / 2 || y >= GameUI::mapAreaWidth - roomSizeWidth / 2
-            || x >= GameUI::mapAreaHeight - roomSizeHeight / 2)
+            || x >= GameUI::mapAreaWidth - roomSizeHeight / 2)
             {
                 ++roomIndex;
                 continue;
@@ -155,36 +169,44 @@ void CursesRenderingEngine::drawUI(std::shared_ptr<GameState> t_currentState)
             
             if (rooms[roomIndex])
             {
-                //TODO draw room rectangle
+                if (visitedRooms[roomIndex])
+                {
+                    switchColor(true, ObjectColor::GREEN, mapWindow.get());
+                }
+                
+                printRectangle(x, y, x + roomSizeWidth - 1, y + roomSizeHeight - 1, mapWindow.get());
+                if (currentRoomIndex == roomIndex)
+                {
+                    mvwaddch(mapWindow.get(), y + 1, x + 1, 'X');
+                }
+
+                if (visitedRooms[roomIndex])
+                {
+                    switchColor(false, ObjectColor::GREEN, mapWindow.get());
+                }
+                
             }
             ++roomIndex;
         }
     }
     
-    
-    box(mapWindow.get(), '1', '1');
+    box(mapWindow.get(), '#', '#');
     wrefresh(mapWindow.get());
 
-    box(infoWindow.get(), '2', '2');
+    box(infoWindow.get(), '#', '#');
     wrefresh(infoWindow.get());
 }
 
 void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
 {
     auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
-    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
-    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
-    int playBottomRightX = playTopLeftX + 1 + currentRoom.width;
-    int playBottomRightY = playTopLeftY + 1 + currentRoom.height;
+    int t_playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
+    int t_playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
+    int t_playBottomRightX = t_playTopLeftX + 1 + currentRoom.width;
+    int t_playBottomRightY = t_playTopLeftY + 1 + currentRoom.height;
     
-    mvwhline(playWindow.get(), playTopLeftY, playTopLeftX, 0, playBottomRightX - playTopLeftX);
-    mvwhline(playWindow.get(), playBottomRightY, playTopLeftX, 0, playBottomRightX - playTopLeftX);
-    mvwvline(playWindow.get(), playTopLeftY, playTopLeftX, 0 , playBottomRightY - playTopLeftY);
-    mvwvline(playWindow.get(), playTopLeftY, playBottomRightX, 0 , playBottomRightY - playTopLeftY);
-    mvwaddch(playWindow.get(), playTopLeftY, playTopLeftX, ACS_ULCORNER);
-    mvwaddch(playWindow.get(), playBottomRightY, playTopLeftX, ACS_LLCORNER);
-    mvwaddch(playWindow.get(), playTopLeftY, playBottomRightX, ACS_URCORNER);
-    mvwaddch(playWindow.get(), playBottomRightY, playBottomRightX, ACS_LRCORNER);
+    printRectangle(t_playTopLeftX, t_playTopLeftY, t_playBottomRightX, t_playBottomRightY, playAreaWindow.get());
+    drawDoors(t_currentState);
     wrefresh(playWindow.get());
 }
 
@@ -235,6 +257,46 @@ void CursesRenderingEngine::drawObject(std::shared_ptr<GameObject> t_gameObject)
     mvwaddch(playAreaWindow.get(),  t_gameObject->movementComponent->position.y, 
     t_gameObject->movementComponent->position.x, t_gameObject->renderComponent->renderChar);
     switchColor(false, t_gameObject->renderComponent->color, playAreaWindow.get());
+}
+
+void CursesRenderingEngine::drawDoors(std::shared_ptr<GameState> t_currentState)
+{
+    auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
+    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
+    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
+    int playBottomRightX = playTopLeftX + currentRoom.width;
+    int playBottomRightY = playTopLeftY + currentRoom.height;
+
+    ObjectColor drawColor = currentRoom.isEnemiesCleared ? ObjectColor::GREEN : ObjectColor::RED;
+
+    if (currentRoom.exits.at(Direction::UP))
+    {
+        switchColor(true, drawColor, playWindow.get());
+        mvwhline(playWindow.get(), playTopLeftY, playTopLeftX + currentRoom.width / 2, 0, 5);
+        switchColor(false, drawColor, playWindow.get());
+    }
+
+    if (currentRoom.exits.at(Direction::DOWN))
+    {
+        switchColor(true, drawColor, playWindow.get());
+        mvwhline(playWindow.get(), playBottomRightY, playTopLeftX + currentRoom.width / 2, 0, 5);
+        switchColor(false, drawColor, playWindow.get());
+    }
+
+    if (currentRoom.exits.at(Direction::LEFT))
+    {
+        switchColor(true, drawColor, playWindow.get());
+        mvwvline(playWindow.get(), playTopLeftY + currentRoom.height / 2, playTopLeftX, 0, 5);
+        switchColor(false, drawColor, playWindow.get());
+    }
+
+    if (currentRoom.exits.at(Direction::RIGHT))
+    {
+        switchColor(true, drawColor, playWindow.get());
+        mvwvline(playWindow.get(), playTopLeftY + currentRoom.height / 2, playBottomRightX, 0, 5);
+        switchColor(false, drawColor, playWindow.get());
+    }
+    
 }
 
 }

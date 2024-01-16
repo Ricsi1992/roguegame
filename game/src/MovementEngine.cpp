@@ -30,7 +30,7 @@ void MovementEngine::update(GameObjectManager& t_gameObjectManager, std::shared_
     }
 }
 
-void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::shared_ptr<GameState> t_currentGameState)
+bool MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::shared_ptr<GameState> t_currentGameState)
 {
     positions.clear();
     nextPositions.clear();
@@ -47,6 +47,13 @@ void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::s
         {
         t_gameObjectManager.playerObject->movementComponent->move(t_gameObjectManager.playerObject->inputComponent->facing);
         }
+
+        else if (currentRoom.isEnemiesCleared && currentRoom.exits[t_gameObjectManager.
+        playerObject->inputComponent->facing])
+        {
+            return true;
+        }
+        
     }
     int encodedPlayerPosition = currentPlayerPosition.y * currentRoom.width + currentPlayerPosition.x;
 
@@ -77,8 +84,9 @@ void MovementEngine::updatePlayer(GameObjectManager& t_gameObjectManager, std::s
     if (positions.count(encodedPlayerPosition) != 0)
     {
         t_currentGameState.get()->currentGameState = GameStateEnum::LOSS;
-        return;
     }
+
+    return false;
 }
 
 bool MovementEngine::wouldBeOutOfBounds(Position const& t_position, Direction const t_facing, int const t_maxWidth, int const t_maxHeight)

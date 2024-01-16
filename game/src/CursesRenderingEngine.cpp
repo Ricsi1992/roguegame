@@ -238,14 +238,17 @@ CombatEngine const& t_combatEngine)
         switchColor(false, ObjectColor::YELLOW_BG, playAreaWindow.get());
     }
     
-
-    //mvwaddch(playAreaWindow.get(), t_currentState->map.end.y, t_currentState->map.end.x, GameUI::exitCharacter);
-    
     drawObject(t_objectManager.playerObject);
     
     for (auto&& gameObject : t_objectManager.gameObjects)
     {
         drawObject(gameObject);
+    }
+
+    if (t_currentState->level.rooms[t_currentState->level.currentRoomIndex].isEnemiesCleared)
+    {
+        drawDoors(t_currentState);
+        wrefresh(playWindow.get());
     }
     
     wrefresh(playAreaWindow.get()); 

@@ -66,11 +66,19 @@ void GameEngine::handleInput()
     {
         gameState.setPlayerQuit(true);
     }
+
+    if (GetKeyState('Z') & IS_PRESSED)
+    {
+        gameObjectManager.gameObjects.clear();
+    }
 }
 
 void GameEngine::update()
 {
-    if (gameState.getCurrentGameState()->currentGameState == GameStateEnum::PLAY)
+    auto&& currentGameState = gameState.getCurrentGameState();
+    auto&& currentRoom = currentGameState->level.rooms[currentGameState->level.currentRoomIndex];
+
+    if (currentGameState->currentGameState == GameStateEnum::PLAY)
     {
         gameObjectManager.playerObject->inputComponent->update();
 
@@ -79,16 +87,26 @@ void GameEngine::update()
             gameObject->inputComponent->update();
         }
         
-        movementEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState());
+        bool playerMovesNextRoom = movementEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState());
+
+        if (playerMovesNextRoom)
+        {
+            currentGameState->level.moveToRoom(gameObjectManager.playerObject->inputComponent->facing);
+        }
+        
+
         combatEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState(), movementEngine.positions);
         movementEngine.update(gameObjectManager, gameState.getCurrentGameState());
 
+        currentRoom.isEnemiesCleared = gameObjectManager.gameObjects.size() == 0;
+
         gameObjectManager.prepareCleanUp();
 
-        // if (gameObjectManager.playerObject->movementComponent->position == gameState.getCurrentGameState()->map.end)
-        // {
-        //     gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
-        // }
+        if (currentGameState->level.roomCount - 1 <= currentGameState->level.clearedRoomCount
+        && currentRoom.isEnemiesCleared)
+        {
+            gameState.setCurrentGameStateEnum(GameStateEnum::WIN);
+        }
     }
 }
 

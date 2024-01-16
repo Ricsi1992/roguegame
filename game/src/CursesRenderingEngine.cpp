@@ -64,13 +64,15 @@ CombatEngine const& t_combatEngine)
     {
         if(t_previousState->level.currentRoomIndex != t_currentState->level.currentRoomIndex)
         {
+            werase(mapWindow.get());
             werase(playWindow.get());
+            werase(playAreaWindow.get());
             drawUI(t_currentState);
             drawMap(t_previousState, t_currentState);
             auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
-            int t_playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
-            int t_playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
-            playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width, t_playTopLeftY, t_playTopLeftX));
+            int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
+            int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
+            playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width, playTopLeftY, playTopLeftX));
         }
         drawCurrentState(t_previousState, t_currentState, t_objectManager, t_combatEngine);
     }
@@ -120,10 +122,10 @@ CombatEngine const& t_combatEngine)
 void CursesRenderingEngine::initGamePlay(std::shared_ptr<GameState> t_currentState)
 {
     auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
-    int t_playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
-    int t_playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
+    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2;
+    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2;
     playAreaWindow = std::unique_ptr<WINDOW>(newwin(currentRoom.height, currentRoom.width,
-    t_playTopLeftY, t_playTopLeftX));
+    playTopLeftY, playTopLeftX));
     playWindow = std::unique_ptr<WINDOW>(newwin(GameUI::playAreaHeight, GameUI::playAreaWidth, GameUI::topLeft.y, GameUI::topLeft.x));
 
     mapWindow = std::unique_ptr<WINDOW>(newwin(GameUI::mapAreaHeight, GameUI::mapAreaWidth, 
@@ -200,12 +202,12 @@ void CursesRenderingEngine::drawUI(std::shared_ptr<GameState> t_currentState)
 void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, std::shared_ptr<GameState> t_currentState)
 {
     auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
-    int t_playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
-    int t_playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
-    int t_playBottomRightX = t_playTopLeftX + 1 + currentRoom.width;
-    int t_playBottomRightY = t_playTopLeftY + 1 + currentRoom.height;
+    int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
+    int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
+    int playBottomRightX = playTopLeftX + 1 + currentRoom.width;
+    int playBottomRightY = playTopLeftY + 1 + currentRoom.height;
     
-    printRectangle(t_playTopLeftX, t_playTopLeftY, t_playBottomRightX, t_playBottomRightY, playAreaWindow.get());
+    printRectangle(playTopLeftX, playTopLeftY, playBottomRightX, playBottomRightY, playAreaWindow.get());
     drawDoors(t_currentState);
     wrefresh(playWindow.get());
 }

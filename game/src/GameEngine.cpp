@@ -97,7 +97,7 @@ void GameEngine::update()
             {
                 gameObjectManager.loadRoomObjects(currentRoom.roomLayout, currentGameState);
             }
-            
+            return;
         }
         
 

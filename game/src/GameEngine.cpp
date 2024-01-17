@@ -76,7 +76,6 @@ void GameEngine::handleInput()
 void GameEngine::update()
 {
     auto&& currentGameState = gameState.getCurrentGameState();
-    auto&& currentRoom = currentGameState->level.rooms[currentGameState->level.currentRoomIndex];
 
     if (currentGameState->currentGameState == GameStateEnum::PLAY)
     {
@@ -92,12 +91,20 @@ void GameEngine::update()
         if (playerMovesNextRoom)
         {
             currentGameState->level.moveToRoom(gameObjectManager.playerObject->inputComponent->facing);
+            gameObjectManager.playerMovesToNextRoom(currentGameState);
+            auto&& currentRoom = currentGameState->level.rooms[currentGameState->level.currentRoomIndex];
+            if (!currentRoom.isEnemiesCleared)
+            {
+                gameObjectManager.loadRoomObjects(currentRoom.roomLayout, currentGameState);
+            }
+            
         }
         
 
         combatEngine.updatePlayer(gameObjectManager, gameState.getCurrentGameState(), movementEngine.positions);
         movementEngine.update(gameObjectManager, gameState.getCurrentGameState());
 
+        auto&& currentRoom = currentGameState->level.rooms[currentGameState->level.currentRoomIndex];
         currentRoom.isEnemiesCleared = gameObjectManager.gameObjects.size() == 0;
 
         gameObjectManager.prepareCleanUp();

@@ -81,4 +81,34 @@ void GameObjectManager::loadRoomObjects(std::vector<int> const& t_room, std::sha
     
 }
 
+void GameObjectManager::playerMovesToNextRoom(std::shared_ptr<GameState> t_gameState) 
+{
+    auto&& curentRoom = t_gameState->level.rooms[t_gameState->level.currentRoomIndex];
+    Position playerPos;
+
+    switch (playerObject->inputComponent->facing)
+    {
+    case Direction::UP:
+        playerPos.x = curentRoom.width / 2;
+        playerPos.y = curentRoom.height - 1;
+        break;
+    case Direction::RIGHT:
+        playerPos.x = 0;
+        playerPos.y = curentRoom.height / 2;
+        break;
+    case Direction::DOWN:
+        playerPos.x = curentRoom.width / 2;
+        playerPos.y = 0;
+        break;
+    case Direction::LEFT:
+        playerPos.x = curentRoom.width - 1;
+        playerPos.y = curentRoom.height / 2;
+        break;
+    case Direction::NUMBER_OF_ELEMENTS:
+    default:
+        break;
+    }
+    playerObject->movementComponent->position = playerPos;
+}
+
 }

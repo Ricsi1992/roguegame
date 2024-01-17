@@ -207,7 +207,7 @@ void CursesRenderingEngine::drawMap(std::shared_ptr<GameState> t_previousState, 
     int playBottomRightX = playTopLeftX + 1 + currentRoom.width;
     int playBottomRightY = playTopLeftY + 1 + currentRoom.height;
     
-    printRectangle(playTopLeftX, playTopLeftY, playBottomRightX, playBottomRightY, playAreaWindow.get());
+    printRectangle(playTopLeftX, playTopLeftY, playBottomRightX, playBottomRightY, playWindow.get());
     drawDoors(t_currentState);
     wrefresh(playWindow.get());
 }
@@ -269,8 +269,8 @@ void CursesRenderingEngine::drawDoors(std::shared_ptr<GameState> t_currentState)
     auto&& currentRoom = t_currentState->level.rooms[t_currentState->level.currentRoomIndex];
     int playTopLeftX = (GameUI::playAreaWidth - currentRoom.width) / 2 - 1;
     int playTopLeftY = (GameUI::playAreaHeight - currentRoom.height) / 2 - 1;
-    int playBottomRightX = playTopLeftX + currentRoom.width;
-    int playBottomRightY = playTopLeftY + currentRoom.height;
+    int playBottomRightX = playTopLeftX + currentRoom.width + 1;
+    int playBottomRightY = playTopLeftY + currentRoom.height + 1;
 
     ObjectColor drawColor = currentRoom.isEnemiesCleared ? ObjectColor::GREEN : ObjectColor::RED;
 
